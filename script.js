@@ -1,5 +1,7 @@
 var myApiKey = "FUsnXFJS";
 var smapilistor;
+var latitude;
+var longitude;
 
 function init() {
 	document.getElementById("close").addEventListener("click", smapi);
@@ -9,6 +11,8 @@ function init() {
 	smapilistor = document.getElementById("lista1");
 	textdiv = document.getElementById("textdiv");
 	text = document.getElementById("text");
+
+
 	
 }
 window.addEventListener("load", init);
@@ -20,20 +24,33 @@ function smapi() {
 	request.onreadystatechange = function () {
 		if (request.readyState == 4)
 			if (request.status == 200) displayResponseText(request.responseText);
-			else textdiv.innerHTML = "hej";
+			else textdiv.innerHTML = "Servern hittades inte ";
 	};
+	
 }
 
 function smapi2() {
-	let request = new XMLHttpRequest();
-	request.open("GET", "https://smapi.lnu.se/api/?api_key=" + myApiKey + "&controller=establishment&method=getall&debug=true&descriptions=golfbana&provinces=småland");
-	request.send(null);
-	request.onreadystatechange = function () {
-		if (request.readyState == 4)
-			if (request.status == 200) displayResponseText(request.responseText);
-			else textdiv.innerHTML = "hej";
-	};
+	smapilistor = document.getElementById("lista1");
+    textdiv = document.getElementById("textdiv");
+    text = document.getElementById("text");
+    getCurrentPosition(function(position) {
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+    }, function(error) {
+        console.error("Error getting current position:", error);
+    });
+    let request = new XMLHttpRequest();
+    request.open("GET", "https://smapi.lnu.se/api/?api_key=" + myApiKey + "&controller=activity&method=getfromlatlng&debug=true&descriptions=golfbana&provinces=småland&lat=" + latitude + "&lng=" + longitude + "&radius=500&sort_in=DESC&order_by=rating");
+    request.send(null);
+    request.onreadystatechange = function() {
+        if (request.readyState == 4)
+            if (request.status == 200) displayResponseText(request.responseText);
+            else textdiv.innerHTML = "Servern hittades inte";
+    };
+    console.log(latitude);
+    console.log(longitude);
 }
+
 
 function smapi3() {
 	let request = new XMLHttpRequest();
@@ -42,7 +59,7 @@ function smapi3() {
 	request.onreadystatechange = function () {
 		if (request.readyState == 4)
 			if (request.status == 200) displayResponseText(request.responseText);
-			else textdiv.innerHTML = "hej";
+			else textdiv.innerHTML = "Servern hittades inte";
 	};
 }
 
@@ -54,31 +71,6 @@ function smapi4() {
 	request.onreadystatechange = function () {
 		if (request.readyState == 4)
 			if (request.status == 200) displayResponseText(request.responseText);
-			else textdiv.innerHTML = "hej";
+			else textdiv.innerHTML = "Servern hittades inte ";
 	};
 }
-function displayResponseText(responseText) {
-	// Parse the JSON response
-	var jsonResponse = JSON.parse(responseText);
-	// Get the text element by id
-	//var textElement = document.getElementById("text");
-	
-	// Clear any existing content in the text element
-	let smapitext = "";
-	
-	// Loop through the payload array and create HTML elements to display the properties
-	if (smapilistor!= null){
-	for (var i = 0; i < jsonResponse.payload.length; i++) 
-	 {
-	  var item = jsonResponse.payload[i];
-	  
-	smapitext += "<p>ID: " + item.id + "<br>" +
-						   "Name: " + item.name + "<br>" +
-						   "Rating: " + item.rating + "<br>" +
-						   "Num Reviews: " + item.num_reviews + "<hr></p>";
-						   console.log(jsonResponse);
-	}
-	 }smapilistor.innerHTML = smapitext;
-
-  }
-  

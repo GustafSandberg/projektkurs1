@@ -10,7 +10,7 @@ function init() {
     getCurrentPosition(function(position) {
         latitude = position.coords.latitude;
         longitude = position.coords.longitude;
-        smapi2();
+        smapi3();
     }, function(error) {
         console.error("Error getting current position:", error);
     });
@@ -33,18 +33,17 @@ function getCurrentPosition(successCallback, errorCallback) {
     }
 }
 
-function smapi2() {
-    let request = new XMLHttpRequest();
-    request.open("GET", "https://smapi.lnu.se/api/?api_key=" + myApiKey + "&controller=activity&method=getfromlatlng&debug=true&descriptions=golfbana&lat=" + latitude + "&lng=" + longitude + "&radius=500");
-    request.send(null);
-    request.onreadystatechange = function() {
-        if (request.readyState == 4)
-            if (request.status == 200) displayResponseText(request.responseText);
-            else textdiv.innerHTML = "Servern hittades inte";
-    };
-    console.log(latitude);
-    console.log(longitude);
+function smapi3() {
+	let request = new XMLHttpRequest();
+	request.open("GET", "https://smapi.lnu.se/api/?api_key=" + myApiKey + "&controller=establishment&provinces=öland&method=getfromlatlng&debug=true&descriptions=golfbana&lat=" + latitude + "&lng=" + longitude + "&radius=5000&sort_in=DESC&order_by=rating");
+	request.send(null);
+	request.onreadystatechange = function () {
+		if (request.readyState == 4)
+			if (request.status == 200) displayResponseText(request.responseText);
+			else textdiv.innerHTML = "Servern hittades inte";
+	};
 }
+
 
 function displayResponseText(responseText) {
     var jsonResponse = JSON.parse(responseText);
