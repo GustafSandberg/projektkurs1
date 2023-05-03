@@ -7,10 +7,18 @@
     <title>Golf Småland</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="script3.js"></script>
+    
 </head>
 <body>
-    <header><h1>Golfbanor i Småland</h1></header>
-    <a href="index.html"><img src="img/maxgustaf2.png" alt="ÖS Golf logotyp"></a>
-    <div id="lista1"><h5>Golfbanor</h5></div>
+    <a href="index.html"><img id="back" src="img/back.png" alt="backbutton"></a>
+
+    <label for="Sortera">Sortera efter</label>
+    <select id="sortera">
+        <option id="Avstånd" selected> Avstånd</option>
+        <option id="Pris">Pris</option>
+        <option id="Betyg">Betyg</option>
+    </select>
+    
+    <div id="lista1"><h5></h5></div>
 </body>
 </html>

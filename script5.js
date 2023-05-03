@@ -54,10 +54,11 @@ function displayResponseText(responseText) {
         for (var i = 0; i < jsonResponse.payload.length; i++) {
             var item = jsonResponse.payload[i];
 
-            smapitext += "<p>ID: " + item.id + "<br>" +
-                "Name: " + item.name + "<br>" + "Location: " + item.lat + " " + item.lng + "<br>" +
-                "Rating: " + parseFloat(item.rating).toFixed(1) + "<br>" +
-                "Num Reviews: " + item.num_reviews + "<br>" + "Distance: " + parseFloat(item.distance_in_km).toFixed(1)+ " km " + "<hr></p>";
+            smapitext += "<p> <br>" + "<b>" + item.name + "</b>" + "<br>"+
+            "Betyg: " + parseFloat(item.rating).toFixed(1) + "<br>" +
+           "<a href='" + item.website + "'>Webbplats</a> <br>" +
+            "Recensioner: " + item.num_reviews + "<br>" +
+            "Pris: " + item.price_range + "<br>" + "Avstånd: " + parseFloat(item.distance_in_km).toFixed(1)+ " km " +  "<hr></p>";
         }
     }
     smapilistor.innerHTML = smapitext;

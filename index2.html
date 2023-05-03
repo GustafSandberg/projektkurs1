@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nära dig</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="script2.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script2.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDeCKL3vPx41FAS0Q0mGjpLdiqa07Vd30"></script>
+
 </head>
+
 <body>
-    <header><h1>ÖS GOLF</h1> 
-        <img src="img/maxgustaf2.png" alt="ÖS Golf logotyp"></header>
-    <div id="lista1"><h5>Golfbanor</h5></div>
-   
-    
+    <a href="index.html"><img id="back" src="img/back.png" alt="backbutton"></a>
+    <label for="Sortera">Filtrera efter avstånd</label>
+    <select id="sortera">
+        <option id="Avstånd" selected> 50 km</option>
+        <option id="Pris">100 km</option>
+        <option id="Betyg">200 km</option>
+    </select>
+
+<div id="maps"></div>
+    <div id="lista1">
+        
+<h5></h5>
+    </div>
+
+
 
 
 </body>
+
 </html>
