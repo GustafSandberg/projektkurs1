@@ -1,7 +1,10 @@
 var golfbanorELem
+let hej
+
 
 function init() {
     golfbanorELem=document.getElementById("Golfbanor");
+    hej = document.getElementById("shopbild").src; 
     requestData(); 
     
 }
@@ -24,24 +27,39 @@ function getData(JSONtext){
     let Golfbanor = JSON.parse(JSONtext).Golfbanor; 
 
     let HTMLcode = ""; 
+    
 
     for (let i=0; i < Golfbanor.length; i++){
-       if (Golfbanor[i].Shop == undefined)
-       HTMLcode==""
 
-       else
-         
-        HTMLcode+= "<h3>" + Golfbanor[i].type + "</h3>" +
-        "<p><b> Namn: </b>" + Golfbanor[i].Name + "</p>" + 
-        "<p><b> Hål:  </b>" + Golfbanor[i].Holes + "</p>"+
-        "<p><b> Resturang: </b>" + Golfbanor[i].Restaurant + "</p>"+
-        "<p><b> Shop: </b>" + Golfbanor[i].Shop + "</p>" + 
-        "<p><b> Boende: </b>" + Golfbanor[i].Boende +"</p>" +
-        "<p><b> Husvagnar: </b>" + Golfbanor[i].Husvagnar + "</p>" + 
-        "<p><b> Range: </b>" + Golfbanor[i].Range + "</p>" + 
-        "<p><b> Par: </b>" + Golfbanor[i].Shop + "</p>" + 
-        "<p><b> Sloptabell: </b>" + Golfbanor[i].SlopeT + "</p>" + 
-        "<p><b> Slopekalkylator: </b>" + Golfbanor[i].SlopeK; 
+        let Shop = Golfbanor[i].Shop !== undefined ? "<p><b> Shop: </b><img src='" + hej + "' alt='Shop image'>" + Golfbanor[i].Shop + "</p>" : "";
+
+
+        let Husvagnar = Golfbanor[i].Husvagnar !== undefined ? "<p><b> Husvagn:  </b>" + Golfbanor[i].Husvagnar + "</p>" : "";
+
+        let Restaurant = Golfbanor[i].Restaurant !== undefined ?  "<p><b> Restruang: </b>" + Golfbanor[i].Restaurant + "</p>" : "" ; 
+
+        let Boende = Golfbanor[i].Boende !== undefined ?  "<p><b> Boende: </b>" + Golfbanor[i].Boende + "</p>" : "" ;
+
+        let Range = Golfbanor[i].Range !== undefined ?  "<p><b> Range: </b>" + Golfbanor[i].Range + "</p>" : "" ;
+
+        let SlopeT = Golfbanor[i].SlopeT !== undefined ?  "<p><b> Slopetabell: </b>" + Golfbanor[i].SlopeT + "</p>" : ""; 
+
+        let SlopeK = Golfbanor[i].SlopeK !== undefined ?  "<p><b> Slopkalkylatro: </b>" + Golfbanor[i].SlopeK + "</p>" : "";  
+
+        let type = Golfbanor[i].type !== undefined ? HTMLcode+= "<h3>" + Golfbanor[i].type + "</h3>" :  ""; 
+        
+       
+       
+        HTMLcode+=  
+        "<p><b> Namn: </b>" + Golfbanor[i].Name + 
+        "<p><b> Holes: </b>" + Golfbanor[i].Holes + 
+         Restaurant + 
+         Shop + 
+         Boende +
+         Husvagnar + 
+        Range +  
+        SlopeT + 
+        SlopeK; 
     
 
     }

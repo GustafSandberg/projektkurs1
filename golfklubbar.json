@@ -1,9 +1,9 @@
 {
-    "Golfbanor": [
+    "Golfbanor" : [
         {
             "Name": "A6 Golfklubb", 
             "Holes": "18 och 9 hål",
-            "Restaurant": "nej",
+            "Restaurant": "Restaurang",
             "Shop": "Shop", 
             "Boende": "Boende", 
             "Range": "Range", 
