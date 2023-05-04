@@ -3,7 +3,7 @@
         {
             "Name": "A6 Golfklubb", 
             "Holes": "18 och 9 hål",
-            "Restaurant": "Restaurang",
+            "Restaurant": "nej",
             "Shop": "Shop", 
             "Boende": "Boende", 
             "Range": "Range", 
@@ -71,7 +71,7 @@
         "Range": "Range", 
         "Par": "Oklart", 
         "SlopeK": "Slopkalkylator"
-    }
+    },
     {
         "Name": "Glasriket GK", 
         "Holes": "18 hål",
@@ -82,7 +82,7 @@
         "Par": "Oklart", 
         "SlopeK": "Slopkalkylator", 
         "SlopeT": "Sloptabell"
-    }
+    },
     {
         "Name": "Gränna GK", 
         "Holes": "18 hål",
@@ -93,7 +93,7 @@
         "Par": "Oklart", 
         "SlopeK": "Slopkalkylator", 
         "SlopeT": "Sloptabell"
-    }
+    },
    
 
     {
@@ -107,7 +107,7 @@
         "Par": "Par 74", 
         "SlopeT": "Sloptabell"
      
-    }
+    },
 
     {
         "Name": "Götaströms Golfklubb", 
@@ -117,8 +117,8 @@
        "Husvagnar": "Husvagnsparkering",
         "Range": "Range", 
         "Par": "Par 72", 
-        "SlopeK": "Slopkalkylator", 
-    }
+        "SlopeK": "Slopkalkylator"
+    },
 
     {
         "Name": "Isaberg Golfklubb", 
@@ -141,7 +141,7 @@
         "Range": "Range", 
         "Par": "Par 70", 
         "SlopeT": "Sloptabell"
-    }
+    },
 
     {
         "Name": "Kalmar Gk", 
@@ -152,7 +152,7 @@
         "Range": "Range", 
         "Par": "Par 71 och 72", 
         "SlopeT": "Sloptabell"
-    }
+    },
 
     {
         "Name": "Lagan GK", 
@@ -163,7 +163,7 @@
         "Range": "Range", 
         "Par": "Par 72", 
         "SlopeT": "Sloptabell"
-    }
+    },
 
     { 
     "Name": "Lysingbadets GK", 
@@ -172,9 +172,8 @@
     "Shop": "Shop", 
    "Husvagnar": "Camping",
     "Range": "Range", 
-    "Par": "Par 72", 
-    
-}
+    "Par": "Par 72"    
+},
 { 
 "Name": "Mönsterås GK", 
 "Holes": "18 hål och 9 hål",
@@ -193,7 +192,7 @@
     "Range": "Range", 
     "Par": "Par 72", 
     "SlopeK": "Slopekalkylator"
-}
+},
 
 {
     "Name": "Nybro GK", 
@@ -206,7 +205,7 @@
     "Par": "Par 72", 
     "SlopeK": "Slopekalkylator",
     "SlopeT": "Sloptabell"
-}
+},
 
 {
     "Name": "Oskarshamn GK", 
@@ -218,7 +217,7 @@
     "Range": "Range", 
     "Par": "Par 71", 
     "SlopeT": "Sloptabell"
-}
+},
 
 {
     "Name": "Ramkvilla Golf", 
@@ -229,7 +228,7 @@
     "Range": "Range", 
     "Par": "Par 72", 
     "SlopeT": "Sloptabell"
-}
+},
 
 {
     "Name": "Reftele GK", 
@@ -239,16 +238,16 @@
     "Range": "Range", 
     "Par": "Par 72", 
     "SlopeT": "Sloptabell"
-}
+},
 
 {
     "Name": "Rockartorp Golf", 
     "Holes": "9 hål",
     "Shop": "Shop", 
-    "Range": "Range", 
+    "Range": "Range"
     
    
-}
+},
 
 {
     "Name": "Ryfors GK", 
@@ -259,7 +258,7 @@
     "Range": "Range", 
     "Par": "Par 72", 
     "SlopeT": "Sloptabell"
-}
+},
 {
     "Name": "Sand Golf club", 
     "Holes": "18 hål",
@@ -268,8 +267,8 @@
     "Boende": "Boende",
     "Range": "Range", 
     "Par": "Par 72", 
-    "SlopeT": "Sloptabell",
-}
+    "SlopeT": "Sloptabell"
+},
 {
     "Name": "Saxnäs Golf", 
     "Holes": "18 hål",
@@ -277,8 +276,8 @@
     "Shop": "Shop", 
     "Boende": "Boende",
     "Range": "Range", 
-    "Par": "Par 72", 
-}
+    "Par": "Par 72"
+},
 {
     "Name": "Skinnarebo GK", 
     "Holes": "18 hål och 9 hål",
@@ -286,8 +285,8 @@
     "Shop": "Shop", 
     "Boende": "Boende",
     "Range": "Range", 
-    "Par": "Par 71", 
-}
+    "Par": "Par 71"
+},
 {
     "Name": "Tobö GK", 
     "Holes": "18 hål",
@@ -295,8 +294,8 @@
     "Shop": "Shop", 
     "Boende": "Boende",
     "Range": "Range", 
-    "Par": "Par 72", 
-}
+    "Par": "Par 72"
+},
 {
     "Name": "Tranås GK", 
     "Holes": "18 hål och 9 hål",
@@ -304,13 +303,13 @@
     "Shop": "Shop", 
     "Boende": "Boende",
     "Range": "Range", 
-    "Par": "Par 72", 
-}
+    "Par": "Par 72"
+},
 {
     "Name": "Uppvidinge GK", 
     "Holes": "9 hål",
-    "Shop": "Shop", 
-}
+    "Shop": "Shop"
+},
 {
     "Name": "Vetlanda GK", 
     "Holes": "18 hål och 9 hål",
@@ -318,18 +317,18 @@
     "Shop": "Shop", 
     "Boende": "Boende",
     "Range": "Range", 
-    "Par": "Par 71", 
-}
+    "Par": "Par 71"
+},
 {
     "Name": "Vimmerby GK", 
     "Holes": "9 hål",
     "Shop": "Shop",
-    "Range": "Range", 
-}
+    "Range": "Range"
+},
 {
     "Name": "Visingsö GK", 
-    "Holes": "9 hål",
-}
+    "Holes": "9 hål"
+},
 {
     "Name": "Västerviks Golf", 
     "Holes": "18 hål",
@@ -337,8 +336,8 @@
     "Shop": "Shop", 
     "Boende": "Boende",
     "Range": "Range", 
-    "Par": "Par 72", 
-}
+    "Par": "Par 72" 
+},
 {
     "Name": "Växjö GK", 
     "Holes": "18 hål",
@@ -347,8 +346,8 @@
     "Boende": "Boende",
     "Range": "Range", 
     "Par": "Par 72",
-    "SlopeT": "Ja", 
-}
+    "SlopeT": "Ja"
+},
 {
     "Name": "Wiredaholm ", 
     "Holes": "18 hål",
@@ -357,8 +356,8 @@
     "Boende": "Boende",
     "Range": "Range", 
     "Par": "Par 71", 
-    "SlopeT": "Ja",
-}
+    "SlopeT": "Ja"
+},
 {
     "Name": "Älmhults GK", 
     "Holes": "18 hål",
@@ -367,8 +366,8 @@
     "Boende": "Boende",
     "Range": "Range", 
     "Par": "Par 72",
-    "SlopeT": "Ja", 
-}
+    "SlopeT": "Ja"
+},
 {
     "Name": "Ölands GK", 
     "Holes": "18 hål",
