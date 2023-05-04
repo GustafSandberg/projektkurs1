@@ -1,10 +1,18 @@
-var golfbanorELem
-let hej
+var golfbanorELem;
+var shopbild;
+var golfclub;
+var golffield;
+var trailer;
+var food;
 
 
 function init() {
     golfbanorELem=document.getElementById("Golfbanor");
-    hej = document.getElementById("shopbild").src; 
+    shopbild = document.getElementById("shopbild").src; 
+    golfclub = document.getElementById("golfclub").src;
+    golffield = document.getElementById("golffield").src;
+    trailer = document.getElementById("trailer").src;
+    food = document.getElementById("food").src;
     requestData(); 
     
 }
@@ -31,16 +39,16 @@ function getData(JSONtext){
 
     for (let i=0; i < Golfbanor.length; i++){
 
-        let Shop = Golfbanor[i].Shop !== undefined ? "<p><b> Shop: </b><img src='" + hej + "' alt='Shop image'>" + Golfbanor[i].Shop + "</p>" : "";
+        let Shop = Golfbanor[i].Shop !== undefined ? "<p><b> Shop: </b><img src='" + shopbild + "' alt='Shop image'>" + Golfbanor[i].Shop + "</p>" : "";
 
 
-        let Husvagnar = Golfbanor[i].Husvagnar !== undefined ? "<p><b> Husvagn:  </b>" + Golfbanor[i].Husvagnar + "</p>" : "";
+        let Husvagnar = Golfbanor[i].Husvagnar !== undefined ? "<p><b> Husvagn: </b><img src='" + trailer + "' alt='trailer'>" + Golfbanor[i].Husvagnar + "</p>" : "";
 
-        let Restaurant = Golfbanor[i].Restaurant !== undefined ?  "<p><b> Restruang: </b>" + Golfbanor[i].Restaurant + "</p>" : "" ; 
+        let Restaurant = Golfbanor[i].Restaurant !== undefined ? "<p><b> Restaurang: </b><img src='" + food + "' alt='restaurant'>" + Golfbanor[i].Restaurant + "</p>" : "";
 
         let Boende = Golfbanor[i].Boende !== undefined ?  "<p><b> Boende: </b>" + Golfbanor[i].Boende + "</p>" : "" ;
 
-        let Range = Golfbanor[i].Range !== undefined ?  "<p><b> Range: </b>" + Golfbanor[i].Range + "</p>" : "" ;
+        let Range = Golfbanor[i].Range !== undefined ? "<p><b> Range: </b><img src='" + golfclub + "' alt='golfclub'>" + Golfbanor[i].Range + "</p>" : "";
 
         let SlopeT = Golfbanor[i].SlopeT !== undefined ?  "<p><b> Slopetabell: </b>" + Golfbanor[i].SlopeT + "</p>" : ""; 
 
