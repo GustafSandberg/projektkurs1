@@ -5,11 +5,11 @@ var longitude;
 var order_by ="rating"; 
 var sort_in ="DESC";
 
+
 function init() {
- 
-   
     smapilistor = document.getElementById("lista1");
-    textdiv = document.getElementById("textdiv");
+    textdiv = document.getElementById("show");
+    
     text = document.getElementById("text");
     getCurrentPosition(function(position) {
         latitude = position.coords.latitude;
@@ -25,7 +25,13 @@ function init() {
     smapi2(); 
     }); 
 
-    document.getElementById("Pris").addEventListener("click", function(){
+    document.getElementById("Pris1").addEventListener("click", function(){
+        order_by = "price_range";
+        sort_in = "DESC";
+        smapi2(); 
+    })
+
+    document.getElementById("Pris2").addEventListener("click", function(){
         order_by = "price_range";
         sort_in = "ASC";
         smapi2(); 
@@ -83,12 +89,39 @@ function displayResponseText(responseText) {
         for (var i = 0; i < jsonResponse.payload.length; i++) {
             var item = jsonResponse.payload[i];
 
-            smapitext += "<p> <br>" + "<b>" + item.name + "</b>" + "<br>"+
+            smapitext += "<div id='id-" + item.id + "'><p> <br>" + "<b>" + item.name + "</b>" + "<br>"+
             "Betyg: " + parseFloat(item.rating).toFixed(1) + "<br>" +
            "<a href='" + item.website + "'>Webbplats</a> <br>" +
             "Recensioner: " + item.num_reviews + "<br>" +
-            "Pris: " + item.price_range + "<br>" + "Avstånd: " + parseFloat(item.distance_in_km).toFixed(1)+ " km " +  "<hr></p>";
+            "Pris: " + item.price_range + "<br>" + "Avstånd: " + parseFloat(item.distance_in_km).toFixed(1)+ " km " +  "<hr></p></div>";
+            
+
+            smapilistor.addEventListener("click", function(){
+                addElement(item.id);
+            }); 
         }
+      
     }
     smapilistor.innerHTML = smapitext;
+
+   
+    
+}
+
+function addElement (id){
+    let request = new XMLHttpRequest();
+    
+    request.open("GET", "golfklubbar.json?id=" + id, true);
+    request.send(null);
+    
+    request.onreadystatechange = function() {
+        if (request.readyState == 4)
+            if (request.status == 200) displayResponseText(request.responseText);
+            else show.innerHTML = "Servern hittades inte";
+    };
+    
+    console.log(id); 
+
+    
+
 }

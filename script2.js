@@ -8,7 +8,7 @@ function init() {
 
     
     smapilistor = document.getElementById("lista1");
-    textdiv = document.getElementById("textdiv");
+    
     text = document.getElementById("text");
     getCurrentPosition(function(position) {
         latitude = position.coords.latitude;

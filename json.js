@@ -37,7 +37,7 @@ function getData(JSONtext){
     let HTMLcode = ""; 
     
 
-    for (let i=0; i < Golfbanor.length; i++){
+    for (let i=0; i < Golfbanor.length; i++){ //turner operator 
 
         let Shop = Golfbanor[i].Shop !== undefined ? "<p><b> Shop: </b><img src='" + shopbild + "' alt='Shop image'>" + Golfbanor[i].Shop + "</p>" : "";
 
@@ -59,15 +59,15 @@ function getData(JSONtext){
        
        
         HTMLcode+=  
-        "<p><b> Namn: </b>" + Golfbanor[i].Name + 
-        "<p><b> Holes: </b>" + Golfbanor[i].Holes + 
+         Golfbanor[i].Name + 
+         Golfbanor[i].Holes + 
          Restaurant + 
          Shop + 
          Boende +
          Husvagnar + 
-        Range +  
-        SlopeT + 
-        SlopeK; 
+         Range +  
+         SlopeT + 
+         SlopeK; 
     
 
     }
