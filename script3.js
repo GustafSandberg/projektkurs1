@@ -4,13 +4,26 @@ var latitude;
 var longitude;
 var order_by ="rating"; 
 var sort_in ="DESC";
+var golfbanorELem;
+var shopbild;
+var golfclub;
+var golffield;
+var trailer;
+var food;
+
+
 
 
 function init() {
     smapilistor = document.getElementById("lista1");
     textdiv = document.getElementById("show");
-    
     text = document.getElementById("text");
+    golfbanorELem=document.getElementById("Golfbanor");
+    shopbild = document.getElementById("shopbild").src; 
+    golfclub = document.getElementById("golfclub").src;
+    golffield = document.getElementById("golffield").src;
+    trailer = document.getElementById("trailer").src;
+    food = document.getElementById("food").src;
     getCurrentPosition(function(position) {
         latitude = position.coords.latitude;
         longitude = position.coords.longitude;
@@ -81,25 +94,65 @@ function smapi2() {
 
 
 
-function displayResponseText(responseText) {
+function displayResponseText(responseText, selectedID) {
     var jsonResponse = JSON.parse(responseText);
     let smapitext = "";
+    
 
     if (smapilistor != null) {
-        for (var i = 0; i < jsonResponse.payload.length; i++) {
+        console.log(jsonResponse)
+        if(jsonResponse.payload) {
+            console.log("payload")
+            for (var i = 0; i < jsonResponse.payload.length; i++) {
             var item = jsonResponse.payload[i];
 
-            smapitext += "<div id='id-" + item.id + "'><p> <br>" + "<b>" + item.name + "</b>" + "<br>"+
+            smapitext += "<div onclick='addElement("+item.id + ")' id='id-" + item.id + "'><p> <br>" + "<b>" + item.name + "</b>" + "<br>"+
             "Betyg: " + parseFloat(item.rating).toFixed(1) + "<br>" +
            "<a href='" + item.website + "'>Webbplats</a> <br>" +
             "Recensioner: " + item.num_reviews + "<br>" +
             "Pris: " + item.price_range + "<br>" + "Avstånd: " + parseFloat(item.distance_in_km).toFixed(1)+ " km " +  "<hr></p></div>";
             
+        } 
 
-            smapilistor.addEventListener("click", function(){
-                addElement(item.id);
-            }); 
         }
+       else {
+        console.log("golfbanor")
+        for (var i = 0; i < jsonResponse.Golfbanor.length; i++) {
+        var Golfbanor = jsonResponse.Golfbanor;
+
+        if(Golfbanor[i].id == selectedID){
+            let Shop = Golfbanor[i].Shop !== undefined ? "<p><b> Shop: </b><img src='" + shopbild + "' alt='Shop image'>" + Golfbanor[i].Shop + "</p>" : "";
+    
+            let Husvagnar = Golfbanor[i].Husvagnar !== undefined ? "<p><b> Husvagn: </b><img src='" + trailer + "' alt='trailer'>" + Golfbanor[i].Husvagnar + "</p>" : "";
+    
+            let Restaurant = Golfbanor[i].Restaurant !== undefined ? "<p><b> Restaurang: </b><img src='" + food + "' alt='restaurant'>" + Golfbanor[i].Restaurant + "</p>" : "";
+    
+            let Boende = Golfbanor[i].Boende !== undefined ?  "<p><b> Boende: </b>" + Golfbanor[i].Boende + "</p>" : "" ;
+    
+            let Range = Golfbanor[i].Range !== undefined ? "<p><b> Range: </b><img src='" + golfclub + "' alt='golfclub'>" + Golfbanor[i].Range + "</p>" : "";
+    
+            let SlopeT = Golfbanor[i].SlopeT !== undefined ?  "<p><b> Slopetabell: </b>" + Golfbanor[i].SlopeT + "</p>" : ""; 
+    
+            let SlopeK = Golfbanor[i].SlopeK !== undefined ?  "<p><b> Slopkalkylatro: </b>" + Golfbanor[i].SlopeK + "</p>" : "";  
+    
+            let type = Golfbanor[i].type !== undefined ? smapitext+= "<h3>" + Golfbanor[i].type + "</h3>" :  ""; 
+            
+           
+           
+            smapitext+=  
+             Golfbanor[i].Name + 
+             Golfbanor[i].Holes + 
+             Restaurant + 
+             Shop + 
+             Boende +
+             Husvagnar + 
+             Range +  
+             SlopeT + 
+             SlopeK; 
+        
+        } 
+      } 
+    }
       
     }
     smapilistor.innerHTML = smapitext;
@@ -116,12 +169,14 @@ function addElement (id){
     
     request.onreadystatechange = function() {
         if (request.readyState == 4)
-            if (request.status == 200) displayResponseText(request.responseText);
+            if (request.status == 200) displayResponseText(request.responseText, id);
             else show.innerHTML = "Servern hittades inte";
     };
     
-    console.log(id); 
+   
 
     
 
 }
+
+
