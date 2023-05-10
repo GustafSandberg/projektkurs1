@@ -11,6 +11,8 @@ var golffield;
 var trailer;
 var food;
 var imgElem
+var Golfboll
+var hotel
 
 
 
@@ -23,6 +25,8 @@ function init() {
     golffield = document.getElementById("golffield").src;
     trailer = document.getElementById("trailer").src;
     food = document.getElementById("food").src;
+    Golfboll =document.getElementById("boll").src; 
+    hotel = document.getElementById("hotel").src; 
 
     getCurrentPosition(function (position) {
         latitude = position.coords.latitude;
@@ -119,7 +123,8 @@ function displayResponseText(responseText, selectedID) {
 
                 "<div id=avstånd>" + "Avstånd: " + parseFloat(item.distance_in_km).toFixed(1) + " km " + "</div>" + "<hr></p></div>";
 
-                visabild(); 
+        
+             
         }
 
         }
@@ -129,29 +134,33 @@ function displayResponseText(responseText, selectedID) {
 
                 if (Golfbanor[i].id == selectedID) {
 
-                    let Shop = Golfbanor[i].Shop !== undefined ? "<p><b> Shop: </b><img src='" + shopbild + "' alt='Shop image'>" + Golfbanor[i].Shop + "</p>" : "";
+                    let Shop = Golfbanor[i].Shop !== undefined ? "<p id=shop><b> </b><img src='" + shopbild + "' alt='Shop image'>" + Golfbanor[i].Shop + "</p>" : "";
 
-                    let Husvagnar = Golfbanor[i].Husvagnar !== undefined ? "<p><b> Husvagn: </b><img src='" + trailer + "' alt='trailer'>" + Golfbanor[i].Husvagnar + "</p>" : "";
+                    let Husvagnar = Golfbanor[i].Husvagnar !== undefined ? "<p id=Husvagn><b> Husvagn: </b><img src='" + trailer + "' alt='trailer'>" + Golfbanor[i].Husvagnar + "</p>" : "";
 
-                    let Restaurant = Golfbanor[i].Restaurant !== undefined ? "<p><b> Restaurang: </b><img src='" + food + "' alt='restaurant'>" + Golfbanor[i].Restaurant + "</p>" : "";
+                    let Restaurant = Golfbanor[i].Restaurant !== undefined ? "<p id=Restaurant><b>  </b><img src='" + food + "' alt='restaurant'>" + Golfbanor[i].Restaurant + "</p>" : "";
 
-                    let Boende = Golfbanor[i].Boende !== undefined ? "<p><b> Boende: </b>" + Golfbanor[i].Boende + "</p>" : "";
+                    let Boende = Golfbanor[i].Boende !== undefined ? "<p id=Boende><b></b><img src='" + hotel + "' alt='hotel'>" + Golfbanor[i].Boende + "</p>" : "";
 
-                    let Range = Golfbanor[i].Range !== undefined ? "<p><b> Range: </b><img src='" + golfclub + "' alt='golfclub'>" + Golfbanor[i].Range + "</p>" : "";
+                    let Range = Golfbanor[i].Range !== undefined ? "<p id=Range><b> </b><img src='" + golfclub + "' alt='golfclub'>" + Golfbanor[i].Range + "</p>" : "";
 
-                    let SlopeT = Golfbanor[i].SlopeT !== undefined ? "<p><b> Slopetabell: </b>" + Golfbanor[i].SlopeT + "</p>" : "";
+                    let SlopeT = Golfbanor[i].SlopeT !== undefined ? "<p id=SlopeT><b>  </b>" + Golfbanor[i].SlopeT + "</p>" : "";
 
-                    let SlopeK = Golfbanor[i].SlopeK !== undefined ? "<p><b> Slopkalkylatro: </b>" + Golfbanor[i].SlopeK + "</p>" : "";
+                    let SlopeK = Golfbanor[i].SlopeK !== undefined ? "<p id=SlopeK><b>  </b>" + Golfbanor[i].SlopeK + "</p>" : "";
+
+                    let Namn = Golfbanor[i].Name !== undefined ? "<p id=Namn><b></b>" + Golfbanor[i].Name + "</p>" : "";
+
+                    let Holes = Golfbanor[i].Holes !== undefined ? "<p id=Holes><b></b><img src='"+ Golfboll +"'alt=Golfboll'>" + Golfbanor[i].Holes + "</p>" : "";
+
+                    let text = Golfbanor[i].Text !== undefined ? "<p id=Text><b></b><img src='" +"'alt=Golfboll'>" + Golfbanor[i].Text + "</p>" : "";
 
                     let type = Golfbanor[i].type !== undefined ? smapitext += "<h3>" + Golfbanor[i].type + "</h3>" : "";
-
-                   
 
 
 
                     smapitext +=
-                        Golfbanor[i].Name +
-                        Golfbanor[i].Holes +
+                        Namn +
+                        Holes +
                         Restaurant +
                         Shop +
                         Boende +
@@ -159,11 +168,16 @@ function displayResponseText(responseText, selectedID) {
                         Range +
                         SlopeT +
                         SlopeK +
+                        text +
                         Golfbanor[i].Bild;
 
                 }
+                
+               
+              
             }
         }
+        
 
     }
     smapilistor.innerHTML = smapitext;
@@ -190,9 +204,3 @@ function addElement(id) {
 
 }
 
-function visabild(){
-    console.log("hej"); 
-    for (var i = 0; i < jsonResponse.Golfbanor.length; i++) {
-        var Golfbanor = jsonResponse.Golfbanor;
-
-}

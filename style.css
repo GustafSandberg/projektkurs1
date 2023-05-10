@@ -216,3 +216,64 @@ div#Pris{
 div#Avstånd{
 
 }
+
+p#Holes{
+  margin-left: 570px;
+  margin-bottom: -75px;
+  
+ 
+
+}
+
+p#shop{
+  margin-left: 300px;
+  margin-top: -80px;
+ 
+
+}
+
+
+p#Husvagn{
+
+}
+
+p#Restaurant{
+  margin-left: 120px;
+
+}
+
+p#Boende {
+  margin-left: 440px;
+  margin-top: -80px;
+
+}
+
+p#Range {
+  margin-left: 580px;
+  margin-top: -80px;
+
+}
+
+p#SlopeT{
+
+}
+
+p#SlopeK {
+
+}
+
+p#Namn{
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+
+}
+
+p#Holes{
+  margin-left: 720px;
+  margin-top: -30px;
+}
+
+p#Text {
+  margin: 10px;
+}
