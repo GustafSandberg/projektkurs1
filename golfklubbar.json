@@ -9,7 +9,8 @@
             "Boende": "Boende", 
             "Range": "Range", 
             "Par": "71", 
-            "Slope": "Sloptabell"
+            "Slope": "Sloptabell",
+            "Bild": "<img src='img/golf-ball.png'>"
 
         },
          {

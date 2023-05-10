@@ -3,13 +3,27 @@ var smapilistor;
 var latitude;
 var longitude;
 var radie = 50
+var golfbanorELem;
+var shopbild;
+var golfclub;
+var golffield;
+var trailer;
+var food;
+var golfboll
+
 
 function init() {
+    smapilistor = document.getElementById("lista1");
+    golfbanorELem = document.getElementById("Golfbanor");
+
+    shopbild = document.getElementById("shopbild").src;
+    golfclub = document.getElementById("golfclub").src;
+    golffield = document.getElementById("golffield").src;
+    trailer = document.getElementById("trailer").src;
+    food = document.getElementById("food").src;
+    golfboll = document.getElementById("golfboll"); 
 
     
-    smapilistor = document.getElementById("lista1");
-    
-    text = document.getElementById("text");
     getCurrentPosition(function(position) {
         latitude = position.coords.latitude;
         longitude = position.coords.longitude;
@@ -64,22 +78,89 @@ function smapi2() {
     };
 }
 
-function displayResponseText(responseText) {
+function displayResponseText(responseText, selectedID) {
     var jsonResponse = JSON.parse(responseText);
     let smapitext = "";
 
     if (smapilistor != null) {
+        if(jsonResponse.payload){
         for (var i = 0; i < jsonResponse.payload.length; i++) {
             var item = jsonResponse.payload[i];
 
-            smapitext += "<p> <br>" + "<b>" + item.name + "</b>" + "<br>"+
-                "Betyg: " + parseFloat(item.rating).toFixed(1) + "<br>" +
-               "<a href='" + item.website + "'>Webbplats</a> <br>" +
-                "Recensioner: " + item.num_reviews + "<br>" +
-                "Pris: " + item.price_range + "<br>" + "Avstånd: " + parseFloat(item.distance_in_km).toFixed(1)+ " km " +  "<hr></p>";
-        }
+            smapitext += "<div onclick='addElement(" + item.id + ")' id='id-" + item.id + "'><p> <br>" +
+
+                    "<div id=Namn>" + "<b>" + item.name + "</b>" + "<br></div>" +
+
+                    "<div id=Betyg>" + "Betyg: " + parseFloat(item.rating).toFixed(1) + "<br></div>" +
+
+                    "<div id=länk>" + "<a href='" + item.website + "'>Webbplats</a> <br></div>" +
+
+                    "<div id=Recensioner>" + "Recensioner: " + item.num_reviews + "<br> </div>" +
+
+                    "<div id=pris>" + "Pris: " + item.price_range + "<br></div>" +
+
+
+                    "<div id=avstånd>" + "Avstånd: " + parseFloat(item.distance_in_km).toFixed(1) + " km " + "</div>" + "<hr></p></div>";
+            }
     }
+    else {
+        for (var i = 0; i < jsonResponse.Golfbanor.length; i++) {
+            var Golfbanor = jsonResponse.Golfbanor;
+
+            if (Golfbanor[i].id == selectedID) {
+
+                let Shop = Golfbanor[i].Shop !== undefined ? "<p><b> Shop: </b><img src='" + shopbild + "' alt='Shop image'>" + Golfbanor[i].Shop + "</p>" : "";
+
+                let Husvagnar = Golfbanor[i].Husvagnar !== undefined ? "<p><b> Husvagn: </b><img src='" + trailer + "' alt='trailer'>" + Golfbanor[i].Husvagnar + "</p>" : "";
+
+                let Restaurant = Golfbanor[i].Restaurant !== undefined ? "<p><b> Restaurang: </b><img src='" + food + "' alt='restaurant'>" + Golfbanor[i].Restaurant + "</p>" : "";
+
+                let Boende = Golfbanor[i].Boende !== undefined ? "<p><b> Boende: </b>" + Golfbanor[i].Boende + "</p>" : "";
+
+                let Range = Golfbanor[i].Range !== undefined ? "<p><b> Range: </b><img src='" + golfclub + "' alt='golfclub'>" + Golfbanor[i].Range + "</p>" : "";
+
+                let SlopeT = Golfbanor[i].SlopeT !== undefined ? "<p><b> Slopetabell: </b>" + Golfbanor[i].SlopeT + "</p>" : "";
+
+                let SlopeK = Golfbanor[i].SlopeK !== undefined ? "<p><b> Slopkalkylatro: </b>" + Golfbanor[i].SlopeK + "</p>" : "";
+
+                let type = Golfbanor[i].type !== undefined ? smapitext += "<h3>" + Golfbanor[i].type + "</h3>" : "";
+
+
+
+                smapitext +=
+                    Golfbanor[i].Name +
+                    Golfbanor[i].Holes +
+                    Restaurant +
+                    Shop +
+                    Boende +
+                    Husvagnar +
+                    Range +
+                    SlopeT +
+                    SlopeK;
+
+            }
+        }
+    }}
+
     smapilistor.innerHTML = smapitext;
+}
+
+function addElement(id) {
+    let request = new XMLHttpRequest();
+
+    request.open("GET", "golfklubbar.json?id=" + id, true);
+    request.send(null);
+
+    request.onreadystatechange = function () {
+        if (request.readyState == 4)
+            if (request.status == 200) displayResponseText(request.responseText, id);
+            else smapilistor.innerHTML = "Servern hittades inte";
+    };
+
+
+
+
+
 }
 
 function smapifilter() {
