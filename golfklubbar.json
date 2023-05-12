@@ -1,445 +1,412 @@
 {
-    "Golfbanor" : [
+    "Golfbanor": [
         {
             "id": "53",
-            "Name": "A6 Golfklubb", 
+            "Name": "A6 Golfklubb",
             "Holes": "18 och 9 hål",
             "Restaurant": "Restaurang",
-            "Shop": "Shop", 
-            "Boende": "Boende", 
-            "Range": "Range", 
-            "Par": "71", 
-            "Slope": "Sloptabell",
-            "Bild": "<img src='img/golf2.jpg'>",
-            "Text": "A6 Golfbana är en fantastisk golfmöjlighet med fin miljö, vackra barnor tillsammans med en välskött förenning. Att spela här är något som alla bör uppleva och vi erbjuder denna möjlighet här i Jönköping"
-
-
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "71",
+            "SlopeT": "Sloptabell",
+            "Bild": "<img id=Golf src='img/hej.jpg'>",
+            "Text": "A6 Golfbana är en fantastisk golfmöjlighet med fin miljö, vackra barnor tillsammans med en välskött förenning. Att spela här är något som alla bör uppleva och vi erbjuder denna möjlighet här i Jönköping", 
+            "BetygS": "Betyg",
+            "Pris": "250-500", 
+            "Betyg": "4,5/5 stjärnor"
         },
-         {
-            "id": "54",
-            "Name": "Alvesta GK", 
-            "Holes": "18 och 9 hål",
-            "Restaurant": "Restaurang",
-            "Shop": "Shop", 
-            "Range": "Ja", 
-            "Par": "72", 
-            "SlopeT": "Sloptabell"
-
-
-        },
-
         {
-        "id": "55",  
-        "Name": "Binga Golf", 
-        "Holes": "9 hål",
-        "Range": "Range", 
-        "Par": "Oklart", 
-        "Slope": "Ja"
-    }, 
-    {
-        "id": "56",
-        "Name": "Byxelkrok GK", 
-        "Holes": "12 hål",
-        "Restaurant": "Restaurang",
-        "Shop": "Shop", 
-        "Husvagnar": "Husvagnsparkering",
-        "Range": "Range", 
-        "Par": "Oklart", 
-        "SlopeK": "Slopekalkylator"
-    },
-    {
-        "id": "57",
-        "Name": "Ekerum Resort", 
-        "Holes": "18 hål",
-        "Restaurant": "Restaurang",
-        "Shop": "Shop", 
-        "Boende": "Boende", 
-        "Range": "Range", 
-        "Par": "Oklart", 
-        "SlopeT": "Sloptabell"
-    }, 
+            "id": "54",
+            "Name": "Alvesta GK",
+            "Holes": "18 och 9 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Range": "Ja",
+            "Par": "72",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "55",
+            "Name": "Binga Golf",
+            "Holes": "9 hål",
+            "Range": "Range",
+            "Par": "Oklart",
+            "Slope": "Ja"
+        },
+        {
+            "id": "56",
+            "Name": "Byxelkrok GK",
+            "Holes": "12 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Par": "Oklart"
+        },
+        {
+            "id": "57",
+            "Name": "Ekerum Resort",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Oklart",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "58",
+            "Name": "Eksjö GK",
+            "Holes": "18 hål",
+            "Restaurant": "Resturang",
+            "Shop": "Shop",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Par": "Oklart",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "59",
+            "Name": "Emmaboda GK",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Oklart"
+            
+        },
+        {
+            "id": "60",
+            "Namn": "Figeholm Golf & Country Club",
+            "Holes": "9 hål"
+        },
+        {
+            "id": "61",
+            "Name": "Glasriket GK",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Oklart",
+            "SlopeK": "Slopkalkylator",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "62",
+            "Name": "Gränna GK",
+            "Holes": "18 hål",
+            "Shop": "Shop",
+            "Husvagnar": "Husvagnsparkering",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Oklart",
+            "SlopeK": "Slopkalkylator",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "63",
+            "Name": "Links Golf Öland",
+            "Restaurant": "Restaurang",
+            "Holes": "18 hål",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Par": "Par 74",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "64",
+            "Name": "Götaströms Golfklubb",
+            "Restaurant": "Restaurang",
+            "Holes": "18 hål",
+            "Shop": "Shop",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Par": "Par 72"
 
-    {
-        "id": "58",
-        "Name": "Eksjö GK", 
-        "Holes": "18 hål",
-        "Restaurant": "Resturang",
-        "Shop": "Shop", 
-        "Husvagnar": "Husvagnsparkering",
-        "Range": "Range", 
-        "Par": "Oklart", 
-        "SlopeT": "Sloptabell"
-    },
-
-    {
-        "id": "59",
-        "Name": "Emmaboda GK", 
-        "Holes": "18 hål",
-        "Restaurant": "Restaurang",
-        "Shop": "Shop", 
-        "Boende": "Boende", 
-        "Range": "Range", 
-        "Par": "Oklart", 
-        "SlopeK": "Slopkalkylator"
-    },
-
-    {
-        "id": "60", 
-        "Namn": "Figeholm Golf & Country Club",
-        "Holes": "9 hål"
-    }, 
-    {
-        "id": "61",
-        "Name": "Glasriket GK", 
-        "Holes": "18 hål",
-        "Restaurant": "Restaurang",
-        "Shop": "Shop", 
-        "Boende": "Boende", 
-        "Range": "Range", 
-        "Par": "Oklart", 
-        "SlopeK": "Slopkalkylator", 
-        "SlopeT": "Sloptabell"
-    },
-    {
-        "id": "62", 
-        "Name": "Gränna GK", 
-        "Holes": "18 hål",
-        "Shop": "Shop", 
-       "Husvagnar": "Husvagnsparkering",
-       "Boende": "Boende",
-        "Range": "Range", 
-        "Par": "Oklart", 
-        "SlopeK": "Slopkalkylator", 
-        "SlopeT": "Sloptabell"
-    },
-   
-
-    {
-        "id": "63", 
-        "Name": "Links Golf Öland",
-        "Restaurant": "Restaurang",
-        "Holes": "18 hål",
-        "Shop": "Shop", 
-       "Boende": "Boende",
-       "Husvagnar": "Husvagnsparkering",
-        "Range": "Range", 
-        "Par": "Par 74", 
-        "SlopeT": "Sloptabell"
-     
-    },
-
-    {
-        "id": "64",
-        "Name": "Götaströms Golfklubb", 
-        "Restaurant": "Restaurang",
-        "Holes": "18 hål",
-        "Shop": "Shop", 
-       "Husvagnar": "Husvagnsparkering",
-        "Range": "Range", 
-        "Par": "Par 72", 
-        "SlopeK": "Slopkalkylator"
-    },
-
-    {
-        "id": "65",
-        "Name": "Isaberg Golfklubb", 
-        "Restaurant": "Resturang",
-        "Holes": "Två 18 hål banor och en 9 hål",
-        "Shop": "Shop", 
-       "Husvagnar": "Husvagnsparkering",
-       "Boende": "Boende",
-        "Range": "Range", 
-        "Par": "Par 71 och 72", 
-        "SlopeT": "Sloptabell"
-
-    }, 
-    {
-        "id": "66",
-        "Name": "Jönköping Gk", 
-        "Restaurant": "Restaurang",
-        "Holes": "18 och 9 hål",
-        "Shop": "Shop", 
-       "Husvagnar": "Husvagnsparkering",
-        "Range": "Range", 
-        "Par": "Par 70", 
-        "SlopeT": "Sloptabell"
-    },
-
-    {
-        "id": "67",
-        "Name": "Kalmar Gk", 
-        "Restaurant": "Restaurang",
-        "Holes": "Två stycken 18 hål",
-        "Shop": "Shop", 
-       "Husvagnar": "Husvagnsparkering",
-        "Range": "Range", 
-        "Par": "Par 71 och 72", 
-        "SlopeT": "Sloptabell"
-    },
-
-    {
-        "id": "68",
-        "Name": "Lagan GK", 
-        "Restaurant": "Restaurang",
-        "Holes": "18 och 9 hål",
-        "Shop": "Shop", 
-       "Husvagnar": "Husvagnsparkering",
-        "Range": "Range", 
-        "Par": "Par 72", 
-        "SlopeT": "Sloptabell"
-    },
-
-    {
-        "id": "69", 
-        "Name": "Lanna Golfklubb", 
-        "Husvagnar": "Husvagnsparkering", 
-        "Range": "Range", 
-        "Holes": "18 och 9 hål", 
-        "Par": "70 och 27", 
-        "SlopeK": "Slopekalkylator"
-
-    },
-    { 
-    "id": "70", 
-    "Name": "Lysingbadets GK", 
-    "Restaurant": "Restaurang",
-    "Holes": "9 hål",
-    "Shop": "Shop", 
-   "Husvagnar": "Camping",
-    "Range": "Range", 
-    "Par": "Par 72"    
-},
-{ 
-    "id": "71",
-"Name": "Mönsterås GK", 
-"Holes": "18 hål och 9 hål",
-"Shop": "Shop", 
-"Husvagnar": "Husvagnsparkering",
-"Range": "Range", 
-"Par": "Par 72"
-},
-
-{
-    "id": "72",
-    "Name": "Möre GK", 
-    "Holes": "18 hål",
-    "Shop": "Shop", 
-    "Restaurant": "Restaurang",
-    "Husvagnar": "Husvagnsparkering",
-    "Range": "Range", 
-    "Par": "Par 72", 
-    "SlopeK": "Slopekalkylator"
-},
-
-{
-    "id": "73", 
-    "Name": "Nybro GK", 
-    "Holes": "18 hål",
-    "Shop": "Shop", 
-    "Restaurant": "Restaurang",
-    "Husvagnar": "Husvagnsparkering",
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 72", 
-    "SlopeK": "Slopekalkylator",
-    "SlopeT": "Sloptabell"
-},
-
-{
-    "id": "74", 
-    "Name": "Oskarshamn GK", 
-    "Holes": "18 hål",
-    "Shop": "Shop", 
-    "Restaurant": "Restaurang",
-    "Husvagnar": "Husvagnsparkering",
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 71", 
-    "SlopeT": "Sloptabell"
-},
-
-{
-    "id": "75", 
-    "Name": "Ramkvilla Golf", 
-    "Holes": "18 hål",
-    "Shop": "Shop", 
-    "Restaurant": "Restaurang",
-    "Boende": "Camping", 
-    "Range": "Range", 
-    "Par": "Par 72", 
-    "SlopeT": "Sloptabell"
-},
-
-{
-    "id": "76",
-    "Name": "Reftele GK", 
-    "Holes": "18 hål",
-    "Shop": "Shop", 
-    "Husvagnar": "Husvagnsparkering",
-    "Range": "Range", 
-    "Par": "Par 72", 
-    "SlopeT": "Sloptabell"
-},
-
-{
-    "id": "77", 
-    "Name": "Rockartorp Golf", 
-    "Holes": "9 hål",
-    "Shop": "Shop", 
-    "Range": "Range"
-    
-   
-},
-
-{
-    "id": "78", 
-    "Name": "Ryfors GK", 
-    "Holes": "18 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 72", 
-    "SlopeT": "Sloptabell"
-},
-{
-    "id": "79",
-    "Name": "Sand Golf club", 
-    "Holes": "18 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 72", 
-    "SlopeT": "Sloptabell"
-},
-{
-    "id": "80",
-    "Name": "Saxnäs Golf", 
-    "Holes": "18 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 72"
-},
-{
-    "id": "81",
-    "Name": "Skinnarebo GK", 
-    "Holes": "18 hål och 9 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 71"
-},
-{
-    "id": "82", 
-    "Name": "Tobö GK", 
-    "Holes": "18 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 72"
-},
-{
-    "id": "83", 
-    "Name": "Tranås GK", 
-    "Holes": "18 hål och 9 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 72"
-},
-{
-    "id": "84", 
-    "Name": "Uppvidinge GK", 
-    "Holes": "9 hål",
-    "Shop": "Shop"
-},
-{
-    "id": "85",
-    "Name": "Vetlanda GK", 
-    "Holes": "18 hål och 9 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 71"
-},
-{
-    "86": "86", 
-    "Name": "Vimmerby GK", 
-    "Holes": "9 hål",
-    "Shop": "Shop",
-    "Range": "Range"
-},
-{
-
-    "id": "87",
-    "Name": "Visingsö GK", 
-    "Holes": "9 hål"
-},
-{
-    "id": "88", 
-    "Name": "Västerviks Golf", 
-    "Holes": "18 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 72" 
-},
-{
-    "id": "89", 
-    "Name": "Växjö GK", 
-    "Holes": "18 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 72",
-    "SlopeT": "Ja"
-},
-{
-    "id": "90", 
-    "Name": "Wiredaholm ", 
-    "Holes": "18 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 71", 
-    "SlopeT": "Ja"
-},
-{
-    "id": "91", 
-    "Name": "Älmhults GK", 
-    "Holes": "18 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 72",
-    "SlopeT": "Ja"
-},
-{
-    "id": "92", 
-    "Name": "Ölands GK", 
-    "Holes": "18 hål",
-    "Restaurant": "Restaurang",
-    "Shop": "Shop", 
-    "Boende": "Boende",
-    "Range": "Range", 
-    "Par": "Par 72", 
-    "SlopeT":"Ja"
-}
-    
-
-
-
+        },
+        {
+            "id": "65",
+            "Name": "Isaberg Golfklubb",
+            "Restaurant": "Resturang",
+            "Holes": "Två 18 hål banor och en 9 hål",
+            "Shop": "Shop",
+            "Husvagnar": "Husvagnsparkering",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 71 och 72",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "66",
+            "Name": "Jönköping Gk",
+            "Restaurant": "Restaurang",
+            "Holes": "18 och 9 hål",
+            "Shop": "Shop",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Par": "Par 70",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "67",
+            "Name": "Kalmar Gk",
+            "Restaurant": "Restaurang",
+            "Holes": "Två stycken 18 hål",
+            "Shop": "Shop",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Par": "Par 71 och 72",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "68",
+            "Name": "Lagan GK",
+            "Restaurant": "Restaurang",
+            "Holes": "18 och 9 hål",
+            "Shop": "Shop",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Par": "Par 72",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "69",
+            "Name": "Lanna Golfklubb",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Holes": "18 och 9 hål",
+            "Par": "70 och 27"
+        },
+        {
+            "id": "70",
+            "Name": "Lysingbadets GK",
+            "Restaurant": "Restaurang",
+            "Holes": "9 hål",
+            "Shop": "Shop",
+            "Husvagnar": "Camping",
+            "Range": "Range",
+            "Par": "Par 72"
+        },
+        {
+            "id": "71",
+            "Name": "Mönsterås GK",
+            "Holes": "18 hål och 9 hål",
+            "Shop": "Shop",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Par": "Par 72"
+        },
+        {
+            "id": "72",
+            "Name": "Möre GK",
+            "Holes": "18 hål",
+            "Shop": "Shop",
+            "Restaurant": "Restaurang",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Par": "Par 72"
+         
+        },
+        {
+            "id": "73",
+            "Name": "Nybro GK",
+            "Holes": "18 hål",
+            "Shop": "Shop",
+            "Restaurant": "Restaurang",
+            "Husvagnar": "Husvagnsparkering",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 72",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "74",
+            "Name": "Oskarshamn GK",
+            "Holes": "18 hål",
+            "Shop": "Shop",
+            "Restaurant": "Restaurang",
+            "Husvagnar": "Husvagnsparkering",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 71",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "75",
+            "Name": "Ramkvilla Golf",
+            "Holes": "18 hål",
+            "Shop": "Shop",
+            "Restaurant": "Restaurang",
+            "Boende": "Camping",
+            "Range": "Range",
+            "Par": "Par 72",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "76",
+            "Name": "Reftele GK",
+            "Holes": "18 hål",
+            "Shop": "Shop",
+            "Husvagnar": "Husvagnsparkering",
+            "Range": "Range",
+            "Par": "Par 72",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "77",
+            "Name": "Rockartorp Golf",
+            "Holes": "9 hål",
+            "Shop": "Shop",
+            "Range": "Range"
+        },
+        {
+            "id": "78",
+            "Name": "Ryfors GK",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 72",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "79",
+            "Name": "Sand Golf club",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 72",
+            "SlopeT": "Sloptabell"
+        },
+        {
+            "id": "80",
+            "Name": "Saxnäs Golf",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 72"
+        },
+        {
+            "id": "81",
+            "Name": "Skinnarebo GK",
+            "Holes": "18 hål och 9 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 71"
+        },
+        {
+            "id": "82",
+            "Name": "Tobö GK",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 72"
+        },
+        {
+            "id": "83",
+            "Name": "Tranås GK",
+            "Holes": "18 hål och 9 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 72"
+        },
+        {
+            "id": "84",
+            "Name": "Uppvidinge GK",
+            "Holes": "9 hål",
+            "Shop": "Shop"
+        },
+        {
+            "id": "85",
+            "Name": "Vetlanda GK",
+            "Holes": "18 hål och 9 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 71"
+        },
+        {
+            "86": "86",
+            "Name": "Vimmerby GK",
+            "Holes": "9 hål",
+            "Shop": "Shop",
+            "Range": "Range"
+        },
+        {
+            "id": "87",
+            "Name": "Visingsö GK",
+            "Holes": "9 hål"
+        },
+        {
+            "id": "88",
+            "Name": "Västerviks Golf",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 72"
+        },
+        {
+            "id": "89",
+            "Name": "Växjö GK",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 72",
+            "SlopeT": "Ja"
+        },
+        {
+            "id": "90",
+            "Name": "Wiredaholm ",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 71",
+            "SlopeT": "Ja"
+        },
+        {
+            "id": "91",
+            "Name": "Älmhults GK",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 72",
+            "SlopeT": "Ja"
+        },
+        {
+            "id": "92",
+            "Name": "Ölands GK",
+            "Holes": "18 hål",
+            "Restaurant": "Restaurang",
+            "Shop": "Shop",
+            "Boende": "Boende",
+            "Range": "Range",
+            "Par": "Par 72",
+            "SlopeT": "Ja"
+        }
     ]
-
 }

@@ -1,0 +1,156 @@
+p#Holes {
+    grid-area: Holes;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+
+}
+
+p#shop {
+    grid-area: Shop;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    text-align: center;
+   
+}
+
+
+p#Husvagn {
+    grid-area: Husvagn;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+p#Restaurant {
+    grid-area: Restaurant;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    
+}
+
+p#Boende {
+    grid-area: Boende;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  
+
+}
+
+p#Range {
+    grid-area: Range;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+
+}
+
+p#SlopeT {
+    grid-area: SlopeT;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+p#Namn {
+    grid-area: Namn;
+    font-weight: bold;
+    font-size: 2.5em;
+    
+}
+
+p#Holes {
+    grid-area: Holes;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+  
+    
+}
+.Ikoner{
+   width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+p#Text {
+    grid-area: Text1;
+   
+}
+
+#Golf{
+    width: 300px;
+    height: 150px;
+    justify-content: center;
+    
+}
+
+#Pris {
+    font-size: 20px;
+    color: white;
+    margin-left: 180px;
+    margin-top: 100px;
+}
+#Betyg {
+    font-size: 20px;
+    color: green; 
+    margin-right: 100px;
+
+    margin-top: 100px;
+}
+p.Bild {
+    grid-area: Bild;
+}
+
+
+html{
+    font-size: 16px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+@media screen and (max-width: 500px) {
+   #lista1{  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:auto;
+    grid-template-areas: 
+    ". Bild Bild Bild Bild Bild . "
+    ". . Namn Namn Namn . . "
+    "Husvagn Boende Range Holes Shop Restaurant SlopeT"
+    ". . Text1 Text1 Text1 . . "
+    
+    ;
+}}

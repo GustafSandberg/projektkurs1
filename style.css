@@ -14,7 +14,7 @@ body {
 
 
 header {
-  font-family: monospace;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding-right: 50px;
   padding-bottom: 50px;
   font-weight: bold;
@@ -25,6 +25,10 @@ header {
   align-items: center;
 }
 
+header h1 {
+  font-family: monospace;
+}
+
 h1 {
   margin: 0 auto;
   position: absolute;
@@ -33,6 +37,8 @@ h1 {
   top: 5%;
   transform: translateY(-5%);
   text-align: center;
+  max-width: fit-content;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .grid-container {
@@ -105,9 +111,7 @@ h1 {
   align-items: center;
 }
 
-img {
-  max-width: 125px;
-}
+
 
 #show {
   background-color: aqua;
@@ -126,7 +130,8 @@ label {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1.2em;
   color: rgb(2, 39, 18);
-  margin: 10px;
+  margin-top: 20px;
+  margin-left: 12px;
 }
 
 select {
@@ -161,17 +166,20 @@ max-height: 50px;
 #map {
     width: 90%;
     height: 400px;
-    margin: 15px 4%; 
-    border: 3px solid #039;
+    margin-top: 100px;
+    border-radius: 5px 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
 }
 
 #Golfbanor {
 visibility: hidden;
+height: 1px;
+width: 1px;
 }
 
-#lista1 img {
-max-width: 60px;
-}
+
 
 #addrBtns {
   display: grid;
@@ -190,90 +198,6 @@ max-width: 60px;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
-div#Namn{
-font-size: 20px;  
-}
-
-div#Länk{
-
-}
-
-div#Recensioner{
-
-}
-
-div#Betyg{
-
-}
-
-div#Pris{
-
-}
-
-div#Avstånd{
-
-}
-
-p#Holes{
-  margin-left: 570px;
-  margin-bottom: -75px;
-  
- 
-
-}
-
-p#shop{
-  margin-left: 300px;
-  margin-top: -80px;
- 
-
-}
-
-
-p#Husvagn{
-
-}
-
-p#Restaurant{
-  margin-left: 120px;
-
-}
-
-p#Boende {
-  margin-left: 440px;
-  margin-top: -80px;
-
-}
-
-p#Range {
-  margin-left: 580px;
-  margin-top: -80px;
-
-}
-
-p#SlopeT{
-
-}
-
-p#SlopeK {
-
-}
-
-p#Namn{
-  font-size: 40px;
-  justify-content: center;
-  text-align: center;
-
-}
-
-p#Holes{
-  margin-left: 720px;
-  margin-top: -30px;
-}
-
-p#Text {
-  margin: 10px;
-}
