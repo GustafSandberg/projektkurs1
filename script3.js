@@ -22,6 +22,7 @@ var golfpar;
 
 
 
+
 function init() {
     smapilistor = document.getElementById("lista1");
     smapilistor2 = document.getElementById("listajson");
@@ -100,7 +101,10 @@ function smapi2() {
     request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState == 4)
-            if (request.status == 200) displayResponseText(request.responseText);
+            if (request.status == 200) {
+                   displayResponseText(request.responseText);
+            }
+         
             else smapilistor.innerHTML = "Servern hittades inte";
     };
 
@@ -112,6 +116,7 @@ function displayResponseText(responseText, selectedID) {
     var jsonResponse = JSON.parse(responseText);
     let smapitext = "";
     let smapitext2 = "";
+    
 
 
 
@@ -140,18 +145,15 @@ function displayResponseText(responseText, selectedID) {
 
         }
         else {
-            for (var i = 0; i < jsonResponse.Golfbanor.length; i++) {
-
+            for (var i = 0; i < jsonResponse.Golfbanor.length; i++) {  
                 var Golfbanor = jsonResponse.Golfbanor;
+            
+
+              
                 smapilistor2.innerHTML = "";
                 header.innerHTML = "";
 
-
-
-
                 if (Golfbanor[i].id == selectedID) {
-
-
 
                     let Shop = Golfbanor[i].Shop !== undefined ? "<p id=shop><b></b><img class=Ikoner src='" + shopbild + "' alt='Shop image'>" + Golfbanor[i].Shop + "</p>" : "";
 
@@ -207,7 +209,14 @@ function displayResponseText(responseText, selectedID) {
                         Webb +
                         Tillbaka +
                         Betyg;
-                }
+
+
+                        "<div id=Karta-" + Golfbanor[i].id + " class=Karta></div>";
+                        /*ShowMap(Golfbanor[i].id, Golfbanor[i].Lat, Golfbanor[i].Lan);*/
+
+                console.log(Golfbanor[i].Lat, Golfbanor[i].Lan)
+                }    
+                   
             }
         }
         smapilistor.innerHTML = smapitext;
@@ -222,13 +231,23 @@ function addElement(id) {
 
     request.onreadystatechange = function () {
         if (request.readyState == 4)
-            if (request.status == 200) displayResponseText(request.responseText, id);
+            if (request.status == 200) {
+                displayResponseText(request.responseText, id);
+                ShowMap(request.responseText, id );
+
+            }
             else smapilistor.innerHTML = "Servern hittades inte";
     };
 
 
-
-
-
 }
+function ShowMap(id, Lat, Lng) {
+    var mapElement = document.getElementById('Karta-' + id); 
+    var mapOptions = {
+        zoom: 15,
+        center: { lat: Lat, lng: Lng }
+    };
+    var map = new google.maps.Map(mapElement, mapOptions);
+}
+
 

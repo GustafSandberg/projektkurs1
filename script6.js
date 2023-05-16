@@ -160,7 +160,7 @@ function initMap() {
 			map: myMap,
 		});
 		myMarkers.push(marker);
-		marker.addListener("click", displayResponseText);
+		marker.addListener("click", showMoreInfo);
 	}
 }
 
@@ -181,7 +181,7 @@ function billigast() {
 			map: myMap,
 		});
 		myMarkers.push(marker);
-		marker.addListener("click", displayResponseText);
+		marker.addListener("click", showMoreInfo);
 	}
 }
 
@@ -194,7 +194,7 @@ function highcourses() {
 			map: myMap,
 		});
 		myMarkers.push(marker);
-		marker.addListener("click", displayResponseText);
+		marker.addListener("click", showMoreInfo);
 	}
 }
 
@@ -207,7 +207,7 @@ function visaAlla() {
 			map: myMap,
 		});
 		myMarkers.push(marker);
-		marker.addListener("click", displayResponseText);
+		marker.addListener("click", showMoreInfo);
 	}
 
 }
@@ -221,7 +221,7 @@ function nioHål() {
 			map: myMap,
 		});
 		myMarkers.push(marker);
-		marker.addListener("click", displayResponseText);
+		marker.addListener("click", showMoreInfo);
 	}
 }
 
@@ -234,7 +234,7 @@ function artonHål() {
 			map: myMap,
 		});
 		myMarkers.push(marker);
-		marker.addListener("click", displayResponseText);
+		marker.addListener("click", showMoreInfo);
 	}
 }
 
@@ -242,10 +242,11 @@ function artonHål() {
 
 
 
-function displayResponseText(){
-	console.log("hej")
+function showMoreInfo(){
 	
-}
+		console.log("hej"); 
+	}	
+
 
 
 
