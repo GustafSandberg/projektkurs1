@@ -18,7 +18,8 @@
             "Webb": "<a href='http://www.a6gk.se'>Webbsida</a>",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
             "Lat": "57.762352",
-            "Lan":"14.211483"
+            "Lng":"14.211483"
+
 
         },
         {
