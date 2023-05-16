@@ -1,6 +1,5 @@
-var myMarkers = [];		// Array med markeringar
-var userMarker;			// Objekt för markering där användaren klickar
-const markerData = [	// Data för markeringar som hör till knapparna
+var myMarkers = [];
+const markerData = [
 	{ position: { lat: 57.762352, lng: 14.211483 }, title: "A6 Golfklubb" },
 	{ position: { lat: 56.963305, lng: 14.565473 }, title: "Alvesta Golfklubb" },
 	{ position: { lat: 56.632005, lng: 16.221657 }, title: "Binga Golfbana" },
@@ -42,11 +41,11 @@ const markerData = [	// Data för markeringar som hör till knapparna
 	{ position: { lat: 57.138411, lng: 16.963828 }, title: "Ölands Golfklubb" },
 ];
 const markerData2 = [
-{ position: { lat: 56.447787, lng: 16.092606 }, title: "Möre Golf" },
-{ position: { lat: 56.632005, lng: 16.221657 }, title: "Binga Golfbana" },
+	{ position: { lat: 56.447787, lng: 16.092606 }, title: "Möre Golf" },
+	{ position: { lat: 56.632005, lng: 16.221657 }, title: "Binga Golfbana" },
 ];
 
-const markerData3 = [	
+const markerData3 = [
 	{ position: { lat: 56.632005, lng: 16.221657 }, title: "Binga Golfbana" },
 	{ position: { lat: 57.762352, lng: 14.211483 }, title: "A6 Golfklubb" },
 	{ position: { lat: 56.963305, lng: 14.565473 }, title: "Alvesta Golfklubb" },
@@ -54,7 +53,7 @@ const markerData3 = [
 
 ];
 
-const markerData4 = [	
+const markerData4 = [
 	{ position: { lat: 57.762352, lng: 14.211483 }, title: "A6 Golfklubb" },
 	{ position: { lat: 56.963305, lng: 14.565473 }, title: "Alvesta Golfklubb" },
 	{ position: { lat: 56.632005, lng: 16.221657 }, title: "Binga Golfbana" },
@@ -70,7 +69,7 @@ const markerData4 = [
 	{ position: { lat: 57.379138, lng: 16.579130 }, title: "Figeholm Golf & Country Club" },
 ];
 
-const markerData5 = [	
+const markerData5 = [
 	{ position: { lat: 57.762352, lng: 14.211483 }, title: "A6 Golfklubb" },
 	{ position: { lat: 56.963305, lng: 14.565473 }, title: "Alvesta Golfklubb" },
 	{ position: { lat: 56.784971, lng: 16.575665 }, title: "Ekerum Golf & Resort" },
@@ -104,19 +103,43 @@ const markerData5 = [
 	{ position: { lat: 56.564709, lng: 14.177020 }, title: "Älmhults Golfklubb" },
 	{ position: { lat: 57.138411, lng: 16.963828 }, title: "Ölands Golfklubb" },
 ];
-var mapLocationElem;	
-
+var mapLocationElem;
+var smapilistor;
+var golfbanorELem;
+var shopbild;
+var golfclub;
+var golffield;
+var trailer;
+var food;
+var hotel;
+var tabell;
+var smapilistor2 = "";
+var smapitext2;
+var header;
+var golfpar;
 
 
 
 function init() {
 	initMap();
-	mapLocationElem = document.getElementById("mapLocation");	
+	mapLocationElem = document.getElementById("mapLocation");
 	document.getElementById("billigast").addEventListener("click", billigast);
 	document.getElementById("högstbetyg").addEventListener("click", highcourses);
 	document.getElementById("visaalla").addEventListener("click", visaAlla);
 	document.getElementById("niohål").addEventListener("click", nioHål);
 	document.getElementById("artonhål").addEventListener("click", artonHål);
+	smapilistor = document.getElementById("lista1");
+	smapilistor2 = document.getElementById("listajson");
+	golfbanorELem = document.getElementById("Golfbanor");
+	shopbild = document.getElementById("shopbild").src;
+	golfclub = document.getElementById("golfclub").src;
+	golffield = document.getElementById("golffield").src;
+	trailer = document.getElementById("trailer").src;
+	food = document.getElementById("food").src;
+	Golfboll = document.getElementById("boll").src;
+	hotel = document.getElementById("hotel").src;
+	tabell = document.getElementById("sloptabell").src;
+	golfpar = document.getElementById("golfpar").src;
 }
 window.addEventListener("load", init);
 
@@ -126,21 +149,20 @@ window.addEventListener("load", init);
 
 function initMap() {
 	myMap = new google.maps.Map(document.getElementById("map"), {
-	  zoom: 6.5,
-	  center: { lat: 57.4254, lng: 15.0865 },
+		zoom: 6.5,
+		center: { lat: 57.4254, lng: 15.0865 },
 	});
 
 	for (let i = 0; i < markerData.length; i++) {
-	  const marker = new google.maps.Marker({
-		position: markerData[i].position,
-		title: markerData[i].title,
-		map: myMap,
-	  });
-  
-	
-	  myMarkers.push(marker);
+		const marker = new google.maps.Marker({
+			position: markerData[i].position,
+			title: markerData[i].title,
+			map: myMap,
+		});
+		myMarkers.push(marker);
+		marker.addListener("click", displayResponseText);
 	}
-  }
+}
 
 
 
@@ -150,67 +172,80 @@ function hideMarkers() {
 	}
 }
 
-function billigast (){
+function billigast() {
 	hideMarkers();
 	for (let i = 0; i < markerData2.length; i++) {
 		const marker = new google.maps.Marker({
-		  position: markerData2[i].position,
-		  title: markerData2[i].title,
-		  map: myMap,
+			position: markerData2[i].position,
+			title: markerData2[i].title,
+			map: myMap,
 		});
-	myMarkers.push(marker);
+		myMarkers.push(marker);
+		marker.addListener("click", displayResponseText);
+	}
 }
 
-
-}
-
-function highcourses (){
+function highcourses() {
 	hideMarkers();
 	for (let i = 0; i < markerData3.length; i++) {
 		const marker = new google.maps.Marker({
-		  position: markerData3[i].position,
-		  title: markerData3[i].title,
-		  map: myMap,
+			position: markerData3[i].position,
+			title: markerData3[i].title,
+			map: myMap,
 		});
-	myMarkers.push(marker);
+		myMarkers.push(marker);
+		marker.addListener("click", displayResponseText);
+	}
 }
 
-}
-
-function visaAlla (){
+function visaAlla() {
 	hideMarkers();
 	for (let i = 0; i < markerData.length; i++) {
 		const marker = new google.maps.Marker({
-		  position: markerData[i].position,
-		  title: markerData[i].title,
-		  map: myMap,
+			position: markerData[i].position,
+			title: markerData[i].title,
+			map: myMap,
 		});
-	myMarkers.push(marker);
-}
+		myMarkers.push(marker);
+		marker.addListener("click", displayResponseText);
+	}
 
 }
-  
-function nioHål (){
+
+function nioHål() {
 	hideMarkers();
 	for (let i = 0; i < markerData4.length; i++) {
 		const marker = new google.maps.Marker({
-		  position: markerData4[i].position,
-		  title: markerData4[i].title,
-		  map: myMap,
+			position: markerData4[i].position,
+			title: markerData4[i].title,
+			map: myMap,
 		});
-	myMarkers.push(marker);
-}	
+		myMarkers.push(marker);
+		marker.addListener("click", displayResponseText);
+	}
 }
 
-function artonHål (){
+function artonHål() {
 	hideMarkers();
 	for (let i = 0; i < markerData5.length; i++) {
 		const marker = new google.maps.Marker({
-		  position: markerData5[i].position,
-		  title: markerData5[i].title,
-		  map: myMap,
+			position: markerData5[i].position,
+			title: markerData5[i].title,
+			map: myMap,
 		});
-	myMarkers.push(marker);
-}	
+		myMarkers.push(marker);
+		marker.addListener("click", displayResponseText);
+	}
 }
+
+
+
+
+
+function displayResponseText(){
+	console.log("hej")
+	
+}
+
+
 

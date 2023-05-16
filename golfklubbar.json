@@ -8,13 +8,15 @@
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
-            "Par": "71",
+            "Par": "Par 71",
             "SlopeT": "Sloptabell",
-            "Bild": "<img id=Golf src='img/hej.jpg'>",
-            "Text": "A6 Golfbana är en fantastisk golfmöjlighet med fin miljö, vackra barnor tillsammans med en välskött förenning. Att spela här är något som alla bör uppleva och vi erbjuder denna möjlighet här i Jönköping", 
-            "BetygS": "Betyg",
-            "Pris": "250-500", 
-            "Betyg": "4,5/5 stjärnor"
+            "Text": "A6 Golfbana är en fantastisk golfmöjlighet med fin miljö, vackra barnor tillsammans med en välskött förenning. Att spela här är något som alla bör uppleva och vi erbjuder denna möjlighet här i Jönköping",
+            "BetygS": "<img src='img/stars/fourhalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "4,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course6.jpg'>",
+            "Webb": "<a href='http://www.a6gk.se'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "54",
@@ -22,17 +24,28 @@
             "Holes": "18 och 9 hål",
             "Restaurant": "Restaurang",
             "Shop": "Shop",
-            "Range": "Ja",
-            "Par": "72",
-            "SlopeT": "Sloptabell"
+            "Range": "Range",
+            "Par": "Par 72",
+            "SlopeT": "Sloptabell",
+            "BetygS": "<img src='img/stars/fourhalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "4,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course7.jpg'>",
+            "Webb": "<a href='http://alvestagolf.se'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "55",
             "Name": "Binga Golf",
             "Holes": "9 hål",
             "Range": "Range",
-            "Par": "Oklart",
-            "Slope": "Ja"
+            "Par": "Par 29",
+            "BetygS": "<img src='img/stars/threestar.png'>",
+            "Pris": "100-250kr",
+            "Betyg": "3/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course8.jpg'>",
+            "Webb": "<a href='http:\/\/bingagolf.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "56",
@@ -40,20 +53,31 @@
             "Holes": "12 hål",
             "Restaurant": "Restaurang",
             "Shop": "Shop",
-            "Husvagnar": "Husvagnsparkering",
             "Range": "Range",
-            "Par": "Oklart"
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course9.jpg'>",
+            "Webb": "<a href='http:\/\/www.byxelkroksgk.se\/'>Webbsida</a>",
+            "Par": "Par 45",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "57",
             "Name": "Ekerum Resort",
-            "Holes": "18 hål",
+            "Holes": "Två 18 hål",
             "Restaurant": "Restaurang",
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
-            "Par": "Oklart",
-            "SlopeT": "Sloptabell"
+            "Par": "Par 72 och 72",
+            "SlopeT": "Sloptabell",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course10.jpg'>",
+            "Webb": "<a href=':http:\/\/www.ekerum.com\/golf\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "58",
@@ -61,10 +85,15 @@
             "Holes": "18 hål",
             "Restaurant": "Resturang",
             "Shop": "Shop",
-            "Husvagnar": "Husvagnsparkering",
             "Range": "Range",
-            "Par": "Oklart",
-            "SlopeT": "Sloptabell"
+            "Par": "Par 72",
+            "SlopeT": "Sloptabell",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course11.jpg'>",
+            "Webb": "<a href='http:\/\/eksjogk.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "59",
@@ -74,13 +103,25 @@
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
-            "Par": "Oklart"
-            
+            "Par": "Par 72",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/img/courses/course12.jpg'>",
+            "Webb": "<a href='http:\/\/www.emmabodagk.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "60",
             "Namn": "Figeholm Golf & Country Club",
-            "Holes": "9 hål"
+            "Holes": "9 hål",
+            "BetygS": "<img src='img/stars/twostar.png'>",
+            "Pris": "250-500kr",
+            "Par": "Par 32",
+            "Betyg": "2/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course13.jpg'>",
+            "Webb": "<a href='http:\/\/www.figeholmsgolf.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "61",
@@ -90,21 +131,30 @@
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
-            "Par": "Oklart",
-            "SlopeK": "Slopkalkylator",
-            "SlopeT": "Sloptabell"
+            "Par": "Par 72",
+            "SlopeT": "Sloptabell",
+            "BetygS": "<img src='img/stars/threestar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "3/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course14.jpg'>",
+            "Webb": "<a href='http:\/\/www.glasriketsgk.se\/\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "62",
             "Name": "Gränna GK",
             "Holes": "18 hål",
             "Shop": "Shop",
-            "Husvagnar": "Husvagnsparkering",
             "Boende": "Boende",
             "Range": "Range",
-            "Par": "Oklart",
-            "SlopeK": "Slopkalkylator",
-            "SlopeT": "Sloptabell"
+            "Par": "Par 72",
+            "SlopeT": "Sloptabell",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course15.jpg'>",
+            "Webb": "<a href='http:\/\/www.grannagk.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "63",
@@ -113,33 +163,48 @@
             "Holes": "18 hål",
             "Shop": "Shop",
             "Boende": "Boende",
-            "Husvagnar": "Husvagnsparkering",
             "Range": "Range",
             "Par": "Par 74",
-            "SlopeT": "Sloptabell"
+            "SlopeT": "Sloptabell",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Pris": "250-500",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course16.jpg'>",
+            "Webb": "<a href='http:\/\/www.gronhogen.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
+
         },
         {
             "id": "64",
-            "Name": "Götaströms Golfklubb",
+            "Name": "Götaströms GK",
             "Restaurant": "Restaurang",
             "Holes": "18 hål",
             "Shop": "Shop",
-            "Husvagnar": "Husvagnsparkering",
             "Range": "Range",
-            "Par": "Par 72"
-
+            "Par": "Par 72",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course17.jpg'>",
+            "Webb": "<a href='\/\/www.gotastromsgk.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "65",
             "Name": "Isaberg Golfklubb",
             "Restaurant": "Resturang",
-            "Holes": "Två 18 hål banor och en 9 hål",
+            "Holes": "Två 18 hål och en 9 hål",
             "Shop": "Shop",
-            "Husvagnar": "Husvagnsparkering",
             "Boende": "Boende",
             "Range": "Range",
             "Par": "Par 71 och 72",
-            "SlopeT": "Sloptabell"
+            "SlopeT": "Sloptabell",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course6.jpg>",
+            "Webb": "<a href='http:\/\/www.isaberggolf.com\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "66",
@@ -147,10 +212,15 @@
             "Restaurant": "Restaurang",
             "Holes": "18 och 9 hål",
             "Shop": "Shop",
-            "Husvagnar": "Husvagnsparkering",
             "Range": "Range",
             "Par": "Par 70",
-            "SlopeT": "Sloptabell"
+            "SlopeT": "Sloptabell",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course7.jpg'>",
+            "Webb": "<a href='http:\/\/www.jonkopingsgk.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "67",
@@ -158,10 +228,15 @@
             "Restaurant": "Restaurang",
             "Holes": "Två stycken 18 hål",
             "Shop": "Shop",
-            "Husvagnar": "Husvagnsparkering",
             "Range": "Range",
             "Par": "Par 71 och 72",
-            "SlopeT": "Sloptabell"
+            "SlopeT": "Sloptabell",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course8.jpg'>",
+            "Webb": "<a href='http:\/\/www.kalmargk.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "68",
@@ -169,18 +244,28 @@
             "Restaurant": "Restaurang",
             "Holes": "18 och 9 hål",
             "Shop": "Shop",
-            "Husvagnar": "Husvagnsparkering",
             "Range": "Range",
             "Par": "Par 72",
-            "SlopeT": "Sloptabell"
+            "SlopeT": "Sloptabell",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course9.jpg'>",
+            "Webb": "<a href='http:\/\/www.lagansgk.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "69",
             "Name": "Lanna Golfklubb",
-            "Husvagnar": "Husvagnsparkering",
             "Range": "Range",
             "Holes": "18 och 9 hål",
-            "Par": "70 och 27"
+            "Par": "Par 70 och 27",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Bild": "<img id=Golf src='img/courses/course10.jpg'>",
+            "Webb": "<a href='http:\/\/www.lannagk.se\/'>Webbsida</a>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "70",
@@ -188,18 +273,28 @@
             "Restaurant": "Restaurang",
             "Holes": "9 hål",
             "Shop": "Shop",
-            "Husvagnar": "Camping",
             "Range": "Range",
-            "Par": "Par 72"
+            "Par": "Par 72",
+            "Bild": "<img id=Golf src='img/courses/course11.jpg'>",
+            "Webb": "<a href='http:\/\/www.lysingsbadetsgk.se\/'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "71",
             "Name": "Mönsterås GK",
             "Holes": "18 hål och 9 hål",
             "Shop": "Shop",
-            "Husvagnar": "Husvagnsparkering",
             "Range": "Range",
-            "Par": "Par 72"
+            "Bild": "<img id=Golf src='/img/courses/course12.jpg'>",
+            "Par": "Par 72",
+            "Webb": "<a href='http://monsterasgk.se'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "72",
@@ -207,10 +302,14 @@
             "Holes": "18 hål",
             "Shop": "Shop",
             "Restaurant": "Restaurang",
-            "Husvagnar": "Husvagnsparkering",
+            "Bild": "<img id=Golf src='img/courses/course13.jpg'>",
             "Range": "Range",
-            "Par": "Par 72"
-         
+            "Par": "Par 72",
+            "Webb": "<a href='http:\/\/www.moregk.se\/'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "100-250kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "73",
@@ -218,11 +317,16 @@
             "Holes": "18 hål",
             "Shop": "Shop",
             "Restaurant": "Restaurang",
-            "Husvagnar": "Husvagnsparkering",
             "Boende": "Boende",
             "Range": "Range",
             "Par": "Par 72",
-            "SlopeT": "Sloptabell"
+            "Bild": "<img id=Golf src='img/courses/course14.jpg'>",
+            "SlopeT": "Sloptabell",
+            "Webb": "<a href='http:\/\/www.nybrogk.se\/'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "74",
@@ -230,11 +334,16 @@
             "Holes": "18 hål",
             "Shop": "Shop",
             "Restaurant": "Restaurang",
-            "Husvagnar": "Husvagnsparkering",
             "Boende": "Boende",
             "Range": "Range",
             "Par": "Par 71",
-            "SlopeT": "Sloptabell"
+            "Bild": "<img id=Golf src='img/courses/course15.jpg'>",
+            "SlopeT": "Sloptabell",
+            "Webb": "<a href='http:\/\/www.oskarshamnsgk.com\/'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "75",
@@ -245,35 +354,58 @@
             "Boende": "Camping",
             "Range": "Range",
             "Par": "Par 72",
-            "SlopeT": "Sloptabell"
+            "Bild": "<img id=Golf src='img/courses/course16.jpg'>",
+            "SlopeT": "Sloptabell",
+            "Webb": "<a href='http:\/\/www.ramkvillagolf.com\/'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "76",
             "Name": "Reftele GK",
             "Holes": "18 hål",
             "Shop": "Shop",
-            "Husvagnar": "Husvagnsparkering",
             "Range": "Range",
             "Par": "Par 72",
-            "SlopeT": "Sloptabell"
+            "Bild": "<img id=Golf src='img/courses/course17.jpg'>",
+            "SlopeT": "Sloptabell",
+            "Webb": "<a href='http:\/\/www.reftelegk.com\/'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "77",
             "Name": "Rockartorp Golf",
             "Holes": "9 hål",
             "Shop": "Shop",
-            "Range": "Range"
+            "Par": "30",
+            "Bild": "<img id=Golf src='img/courses/course6.jpg'>",
+            "Range": "Range",
+            "Webb": "<a href='\/\/www.rockatorpgolf.se\/'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "78",
             "Name": "Ryfors GK",
             "Holes": "18 hål",
-            "Restaurant": "Restaurang",
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
             "Par": "Par 72",
-            "SlopeT": "Sloptabell"
+            "Bild": "<img id=Golf src='img/courses/course7.jpg'>",
+            "SlopeT": "Sloptabell",
+            "Webb": "<a href='http:\/\/www.ryforsgk.se\/'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "79",
@@ -284,7 +416,13 @@
             "Boende": "Boende",
             "Range": "Range",
             "Par": "Par 72",
-            "SlopeT": "Sloptabell"
+            "Bild": "<img id=Golf src='img/courses/course8.jpg'>",
+            "SlopeT": "Sloptabell",
+            "Webb": "<a href='http:\/\/www.sandgolfclub.se\/'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "80",
@@ -294,7 +432,13 @@
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
-            "Par": "Par 72"
+            "Bild": "<img id=Golf src='img/courses/course9.jpg'>",
+            "Par": "Par 72",
+            "Betyg": "2,5/5 stjärnor",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='http:\/\/www.skinnarebo.nu\/'>Webbsida</a>",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "81",
@@ -304,7 +448,14 @@
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
-            "Par": "Par 71"
+            "Bild": "<img id=Golf src='img/courses/course10.jpg'>",
+            "Par": "Par 71",
+            "Webb": "<a href='http:\/\/www.skinnarebo.nu\/'>Webbsida</a>",
+            "BetygS": "Betyg",
+            "Pris": "250-500kr",
+            "Betyg": "2,5/5 stjärnor", 
+             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
+
         },
         {
             "id": "82",
@@ -313,8 +464,14 @@
             "Restaurant": "Restaurang",
             "Shop": "Shop",
             "Boende": "Boende",
+            "Bild": "<img id=Golf src='img/courses/course11.jpg'>",
             "Range": "Range",
-            "Par": "Par 72"
+            "Par": "Par 72",
+            "Betyg": "2,5/5 stjärnor",
+            "Webb": "<a href='http:\/\/www.tobogk.se\/'>Webbsida</a>",
+            "Pris": "250-500kr",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "83",
@@ -323,14 +480,28 @@
             "Restaurant": "Restaurang",
             "Shop": "Shop",
             "Boende": "Boende",
+            "Bild": "<img id=Golf src='img/img/courses/course12.jpg'>",
             "Range": "Range",
-            "Par": "Par 72"
+            "Par": "Par 72",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='http:\/\/www.tranasgk.se\/'>Webbsida</a>",
+            "Betyg": "2,5/5 stjärnor",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "84",
             "Name": "Uppvidinge GK",
             "Holes": "9 hål",
-            "Shop": "Shop"
+            "Bild": "<img id=Golf src='img/courses/course13.jpg'>",
+            "Shop": "Shop",
+            "Par": "33",
+            "Betyg": "2,5/5 stjärnor",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='http:\/\/www.uppvidingegk.com\/se\/'>Webbsida</a>",
+            "Betyg": "2,5/5 stjärnor",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "85",
@@ -339,20 +510,43 @@
             "Restaurant": "Restaurang",
             "Shop": "Shop",
             "Boende": "Boende",
+            "Bild": "<img id=Golf src='img/courses/course14.jpg'>",
             "Range": "Range",
-            "Par": "Par 71"
+            "Par": "Par 71",
+            "Betyg": "2,5/5 stjärnor",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='http:\/\/www.vetlandagk.com\/'>Webbsida</a>",
+            "Betyg": "2,5/5 stjärnor",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "86": "86",
             "Name": "Vimmerby GK",
             "Holes": "9 hål",
             "Shop": "Shop",
-            "Range": "Range"
+            "Bild": "<img id=Golf src='img/courses/course15.jpg'>",
+            "Range": "Range",
+            "Par": "31",
+            "Betyg": "2,5/5 stjärnor",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='http:\/\/www.vimmerbygk.se\/om-klubben\/'>Webbsida</a>",
+            "Betyg": "2,5/5 stjärnor",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "87",
             "Name": "Visingsö GK",
-            "Holes": "9 hål"
+            "Holes": "18 hål",
+            "Bild": "<img id=Golf src='img/courses/course16.jpg'>",
+            "Par:": "68",
+            "Betyg": "2,5/5 stjärnor",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='http:\/\/www.visingsogk.se\/>Webbsida</a>",
+            "Betyg": "2,5/5 stjärnor",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "88",
@@ -361,8 +555,15 @@
             "Restaurant": "Restaurang",
             "Shop": "Shop",
             "Boende": "Boende",
+            "Bild": "<img id=Golf src='img/courses/course17.jpg'>",
             "Range": "Range",
-            "Par": "Par 72"
+            "Par": "Par 72",
+            "Betyg": "2,5/5 stjärnor",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='\/\/www.vasterviksgolf.se\/>Webbsida</a>",
+            "Betyg": "2,5/5 stjärnor",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "89",
@@ -372,8 +573,15 @@
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
+            "Bild": "<img id=Golf src='img/courses/course6.jpg'>",
             "Par": "Par 72",
-            "SlopeT": "Ja"
+            "SlopeT": "Ja",
+            "Betyg": "2,5/5 stjärnor",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='http:\/\/vaxjogk.com\/>Webbsida</a>",
+            "Betyg": "2,5/5 stjärnor",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "90",
@@ -383,8 +591,15 @@
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
+            "Bild": "<img id=Golf src='img/courses/course7.jpg'>",
             "Par": "Par 71",
-            "SlopeT": "Ja"
+            "SlopeT": "Ja",
+            "Betyg": "2,5/5 stjärnor",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='http:\/\/www.wiredaholm.com\/>Webbsida</a>",
+            "Betyg": "2,5/5 stjärnor",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "91",
@@ -394,8 +609,15 @@
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
+            "Bild": "<img id=Golf src='img/courses/course8.jpg'>",
             "Par": "Par 72",
-            "SlopeT": "Ja"
+            "SlopeT": "Ja",
+            "Betyg": "2,5/5 stjärnor",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='https://almhultsgk.se/'>Webbsida</a>",
+            "Betyg": "2,5/5 stjärnor",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         },
         {
             "id": "92",
@@ -405,8 +627,15 @@
             "Shop": "Shop",
             "Boende": "Boende",
             "Range": "Range",
+            "Bild": "<img id=Golf src='img/courses/course9.jpg'>",
             "Par": "Par 72",
-            "SlopeT": "Ja"
+            "SlopeT": "Ja",
+            "Betyg": "2,5/5 stjärnor",
+            "BetygS": "<img src='img/stars/twohalfstar.png'>",
+            "Webb": "<a href='https://www.olandsgk.se'>Webbsida</a>",
+            "Betyg": "2,5/5 stjärnor",
+            "Pris": "250-500kr",
+            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>"
         }
     ]
 }

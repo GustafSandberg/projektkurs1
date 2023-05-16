@@ -7,37 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nära dig</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="json.css">
     <script src="script2.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDeCKL3vPx41FAS0Q0mGjpLdiqa07Vd30"></script>
+    
 
 </head>
 
 <body>
+<header id="header">
     <h1>Närmast dig</h1>
-    <a href="index.html"><img id="back" src="img/back.png" alt="backbutton"></a>
-    <label for="Sortera">Filtrera efter avstånd</label>
-    <select id="sortera">
-        <option id="Avstånd" selected> 50 km</option>
-        <option id="Pris">100 km</option>
-        <option id="Betyg">200 km</option>
-    </select>
+    
+        <a href="index.html"><img id="back" src="img/back.png" alt="backbutton"></a>
+        <label for="Sortera">Filtrera efter avstånd</label>
+        <select id="sortera">
+            <option id="Avstånd" selected> 50 km</option>
+            <option id="Pris">100 km</option>
+            <option id="Betyg">200 km</option>
+        </select>
+    </header>
 
     <div id="Golfbanor">
-    <img src="img/shop.png" alt="shop" id="shopbild">
-    <img src="img/golf-field1.png" alt="golffield" id="golffield">
-    <img src="img/golf.png" alt="golfclub" id="golfclub">
-    <img src="img/food.png" alt="restaurant" id="food">
-    <img src="img/trailer.png" alt="trailer" id="trailer">
-    <img src="img/hotel.png" alt="hotel" id="hotel">
+        <img src="img/shop.png" alt="shop" id="shopbild">
+        <img src="img/golf-field1.png" alt="golffield" id="golffield">
+        <img src="img/golf.png" alt="golfclub" id="golfclub">
+        <img src="img/food.png" alt="restaurant" id="food">
+        <img src="img/trailer.png" alt="trailer" id="trailer">
+        <img src="img/golf-ball.png" alt="golfboll" id="boll">
+        <img src="img/hotel.png" alt="hotel" id="hotel">
+        <img src="img/tabell.png" alt="sloptabell" id="sloptabell">
+        <img src="img/golf-field1.png" alt="golfpar" id="golfpar">
     </div>
+
+
 
    
-
-<div id="maps"></div>
-    <div id="lista1">
-        
-<h5></h5>
-    </div>
+    <div id="lista1"></div>
+    <div id="listajson"></div>
+   
 
 
 

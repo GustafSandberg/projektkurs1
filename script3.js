@@ -10,13 +10,14 @@ var golfclub;
 var golffield;
 var trailer;
 var food;
-var imgElem;
-var Golfboll;
 var hotel;
-var star;
 var tabell;
 var smapilistor2 = "";
 var smapitext2;
+var header;
+var golfpar;
+
+
 
 
 
@@ -32,8 +33,10 @@ function init() {
     food = document.getElementById("food").src;
     Golfboll = document.getElementById("boll").src;
     hotel = document.getElementById("hotel").src;
-    star = document.getElementById("star").src;
     tabell = document.getElementById("sloptabell").src;
+    header = document.getElementById("header");
+    golfpar = document.getElementById("golfpar").src;
+
 
     getCurrentPosition(function (position) {
         latitude = position.coords.latitude;
@@ -111,6 +114,7 @@ function displayResponseText(responseText, selectedID) {
     let smapitext2 = "";
 
 
+
     if (smapilistor != null) {
         if (jsonResponse.payload) {
 
@@ -123,13 +127,9 @@ function displayResponseText(responseText, selectedID) {
 
                     "<div id=BetygAPI>" + "Betyg: " + parseFloat(item.rating).toFixed(1) + "<br></div>" +
 
-                    "<div id=länkAPI>" + "<a href='" + item.website + "'>Webbplats</a> <br></div>" +
+                    "<div id=PrisAPI>" + "Pris: " + item.price_range + "<br></div>" +
 
-                    "<div id=RecensionerAPI>" + "Recensioner: " + item.num_reviews + "<br> </div>" +
-
-                    "<div id=prisAPI>" + "Pris: " + item.price_range + "<br></div>" +
-
-                    "<div id=avståndAPI>" + "Avstånd: " + parseFloat(item.distance_in_km).toFixed(1) + " km " + "</div>" + "<hr></p></div>";
+                    "<div id=AvståndAPI>" + "Avstånd: " + parseFloat(item.distance_in_km).toFixed(1) + " km " + "</div>" + "<hr></p></div>";
 
 
 
@@ -141,17 +141,17 @@ function displayResponseText(responseText, selectedID) {
         }
         else {
             for (var i = 0; i < jsonResponse.Golfbanor.length; i++) {
+
                 var Golfbanor = jsonResponse.Golfbanor;
                 smapilistor2.innerHTML = "";
-                let container
+                header.innerHTML = "";
 
 
 
 
                 if (Golfbanor[i].id == selectedID) {
 
-                    container = document.createElement("div");
-                    container.classList.add("Divcontainer");
+
 
                     let Shop = Golfbanor[i].Shop !== undefined ? "<p id=shop><b></b><img class=Ikoner src='" + shopbild + "' alt='Shop image'>" + Golfbanor[i].Shop + "</p>" : "";
 
@@ -171,50 +171,47 @@ function displayResponseText(responseText, selectedID) {
 
                     let text = Golfbanor[i].Text !== undefined ? "<p id=Text><b></b>" + Golfbanor[i].Text + "</p>" : "";
 
-                    let BetygS = Golfbanor[i].BetygS !== undefined ? "<p class=Bild id=BetygS><b></b><img class=Ikoner src='" + star + "'alt=star'>" + Golfbanor[i].BetygS + "</p>" : "";
+                    let BetygS = Golfbanor[i].BetygS !== undefined ? "<p class=Bild id=BetygS><b></b>" + Golfbanor[i].BetygS + "</p>" : "";
 
-                    let Pris = Golfbanor[i].Pris !== undefined ? "<p class=Bild id=Pris><b>Pris</b>" + Golfbanor[i].Pris + "</p>" : "";
+                    let Pris = Golfbanor[i].Pris !== undefined ? "<p class=Bild id=Pris><b></b>" + Golfbanor[i].Pris + "</p>" : "";
 
                     let Bild = Golfbanor[i].Bild !== undefined ? "<p class=Bild id=Bild1><b></b>" + Golfbanor[i].Bild + "</p>" : "";
 
                     let Betyg = Golfbanor[i].Betyg !== undefined ? "<p class=Bild id=Betyg><b></b>" + Golfbanor[i].Betyg + "</p>" : "";
 
+                    let Webb = Golfbanor[i].Webb !== undefined ? "<p id=Webb><b></b>" + Golfbanor[i].Webb + "</p>" : "";
+
+                    let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b>" + Golfbanor[i].Tillbaka + "</p>" : "";
+
+                    let Par = Golfbanor[i].Par !== undefined ? "<p id=Par><b></b><img class=Ikoner src='" + golfpar + "'alt=golfpar'>" + Golfbanor[i].Par + "</p>" : "";
 
                     let type = Golfbanor[i].type !== undefined ? smapitext += "<h3>" + Golfbanor[i].type + "</h3>" : "";
 
 
 
-                    smapitext +=
-
-                        Namn +
+                    smapitext += Namn +
+                        "<div id=DivIkoner>" +
                         Holes +
+                        Par +
+                        Range +
                         Restaurant +
-                        Shop +
                         Boende +
                         Husvagnar +
-                        Range +
+                        Shop +
                         SlopeT +
+                        "</div>" +
                         text +
-                        BetygS +
                         Bild +
+                        BetygS +
                         Pris +
+                        Webb +
+                        Tillbaka +
                         Betyg;
-
-
                 }
-
-
-
             }
         }
-
         smapilistor.innerHTML = smapitext;
-
     }
-
-
-
-
 }
 
 function addElement(id) {
