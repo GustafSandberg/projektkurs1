@@ -1,4 +1,4 @@
-p#Holes {
+/*p#Holes {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -235,6 +235,206 @@ body {
             "Webb"
             "Text1"
 
+        ;
+    }
+}*/
+
+p#Holes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+}
+p#shop {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+}
+p#Restaurant {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+  
+}
+p#Boende {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+ 
+}
+p#Range {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-align: center;}
+
+
+#KartaMaps {
+        width: 90%;
+        height: 400px;
+        margin-top: 100px;
+        border-radius: 5px 5px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 50px;
+    }
+
+
+p#Par {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    margin: 2px;
+}
+p#Webb {
+    grid-area: Webb;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.707);
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    font-size: 1em;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px 5px;
+}
+#web {
+height: 50px;
+width: 70px;
+ 
+}
+p#SlopeT {
+    grid-area: SlopeT;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+#back1 {
+    grid-area: Tillbaka;
+    width: 50px;
+}
+p#Namn {
+    grid-area: Namn;
+    font-weight: bold;
+    font-size: 2.5em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    place-self: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.Ikoner {
+    width: 70px;
+    height: 70px;
+    margin: 7px;
+    
+    
+}
+p#Text {
+    grid-area: Text1;
+    width: 350px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: rgba(255, 255, 255, 0.707);
+   border-radius: 5px 5px;
+   padding: 10px;
+   margin-top: 0;
+  
+}
+#Pris {
+    font-size: 25px;
+    color: black;
+    margin-left: 200px;
+    margin-top: 140px;
+    padding: 5px;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.707);
+    
+}
+#Betyg {
+    font-size: 25px;
+    color: black;
+    margin-right: 150px;
+    margin-top: 140px;
+    -webkit-text-stroke: 0.1px black;
+    background-color: rgba(255, 255, 255, 0.707);
+    padding: 5px; 
+    border-radius: 10%;
+}
+#Golf {
+    width: 360px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+p.Bild {
+    grid-area: Bild;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    place-self: center;
+  
+}
+#DivIkoner {
+    grid-area: DivIkoner;
+    display: flex;
+    width: 350px;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    place-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    place-self: center;
+    font-size: 0.85em;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media screen and (max-width: 700px) {
+    #lista1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "Tillbaka"
+            "Namn"
+            "Bild"
+            "DivIkoner"
+            "DivIkoner2"
+            "Webb"
+            "Text1"
         ;
     }
 }

@@ -14,9 +14,9 @@ body {
 
 
 #header1 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: monospace;
   font-weight: bold;
-  font-size: 2.2em;
+  font-size: 3.5em;
   color: rgb(2, 39, 18);
   display: flex;
   
@@ -61,28 +61,22 @@ h1 {
   padding: 15px;
 }
 
-#close {
-  background-image: url("img/golf-field.png");
-  background-size: cover;
+#close img  {
+width: 100px;
 }
 
-#smaland {
-  background-image: url("img/golf(1).png");
-  background-size: cover;
+#smaland img {
+width: 100px;
+}
+
+#oland img {
+ width: 100px;
   
 }
 
-#oland {
-  background-image: url("img/golf(2).png");
-  background-size: cover;
-  
+#karta img {
+ width: 100px;
 }
-
-#karta {
-  background-image: url("img/karta.png");
-  background-size: cover;
-}
-
 
 .grid-item {
   display: flex;
@@ -93,6 +87,7 @@ h1 {
   height: 140px;
   justify-self: center;
   margin-top: 30px;
+  font-weight: bold;
  }
 
  .grid-item h2 {

@@ -19,6 +19,7 @@ const markerData = [
 	{ position: { lat: 57.215096, lng: 13.762882 }, title: "Lanna Golfklubb" },
 	{ position: { lat: 57.706277, lng: 15.702713 }, title: "Lysingsbadet Golfklubb" },
 	{ position: { lat: 56.447787, lng: 16.092606 }, title: "Möre Golf" },
+	{ position: { lat: 56.447787, lng: 16.092606 }, title: "Mönsterås Golfklubb" },
 	{ position: { lat: 56.695137, lng: 15.984055 }, title: "Nybro Golfklubb" },
 	{ position: { lat: 57.194772, lng: 16.389016 }, title: "Oskarshamns Golfklubb" },
 	{ position: { lat: 57.207112, lng: 14.939133 }, title: "Ramkvilla Golfklubb" },
