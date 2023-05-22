@@ -116,6 +116,7 @@ function smapi2() {
 
 function displayResponseText(responseText, selectedID) {
     var jsonResponse = JSON.parse(responseText);
+    var smapitext2 = "";
 
 
     if (smapilistor != null) {
@@ -125,15 +126,15 @@ function displayResponseText(responseText, selectedID) {
         for (var i = 0; i < jsonResponse.payload.length; i++) {
             var item = jsonResponse.payload[i];
 
-            smapitext2 += "<div onclick='addElement(" + item.id + ")' id='id-" + item.id + "'> <br>" +
+            smapitext2 += "<div onclick='addElement(" + item.id + ")' id='id-" + item.id + "'> " +
 
-                "<div id=NamnAPI>" + "<b>" + item.name + "</b>" + "<br></div>" +
+                "<div id=NamnAPI>"  + item.name  + "</div>" + "<div id=hej>" +
 
-                "<div id=BetygAPI>" + "Betyg: " + parseFloat(item.rating).toFixed(1) + "<br></div>" +
+                "<p id=BetygAPI>"  + parseFloat(item.rating).toFixed(1) + "/5 stjärnor" + "</p>" +
 
-                "<div id=PrisAPI>" + "Pris: " + item.price_range + "<br></div>" +
+                "<p id=PrisAPI>" + item.price_range + "Kr" +"</p>"  +
 
-                "<div id=AvståndAPI>" + "Avstånd: " + parseFloat(item.distance_in_km).toFixed(1) + " km " + "</div>" + "<hr></div>";
+                "<p id=AvståndAPI>" + parseFloat(item.distance_in_km).toFixed(1) + " km" + "</p>" + "</div></div>" ;
 
 
 
@@ -284,7 +285,6 @@ function requestPic(responseText, id) {
 }
 
 function ShowPic(responseText, smapiRes) {
-    console.log("hej");
     var jsonResponse = JSON.parse(responseText);
     var smapiResponse = JSON.parse(smapiRes).payload;
 
@@ -294,7 +294,7 @@ function ShowPic(responseText, smapiRes) {
 
         for (var j = 0; j < golfbanor.length; j++) {
             if (bildID == golfbanor[j].id) {
-                let Bild = golfbanor[j].Bild !== undefined ? "<p id=Bild3><b></b>" + golfbanor[j].Bild + "</p>" : "";
+                let Bild = golfbanor[j].Bild !== undefined ? "<p ><b></b>" + golfbanor[j].Bild + "</p>" : "";
                 document.getElementById("id-" + bildID).innerHTML += Bild;
             }
         }

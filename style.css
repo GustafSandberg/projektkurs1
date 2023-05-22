@@ -1,15 +1,12 @@
-body {
-  background-color: #b0e3b4;
-background-image: linear-gradient(62deg, #b0e3b4 0%, #ffffff 99%, #ffffff 100%);
-background-size: cover;
-background-repeat: no-repeat;
-}
-
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #b0e3b4;
+  background-image: linear-gradient(62deg, #b0e3b4 0%, #ffffff 99%, #ffffff 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -18,8 +15,6 @@ body {
   font-weight: bold;
   font-size: 3.5em;
   color: rgb(2, 39, 18);
-  display: flex;
-  
 }
 
 h1 {
@@ -28,8 +23,8 @@ h1 {
   left: 0;
   right: 0;
   top: 5%;
+  display: fle;
   text-align: center;
-  max-width: fit-content;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -61,21 +56,21 @@ h1 {
   padding: 15px;
 }
 
-#close img  {
-width: 100px;
+#close img {
+  width: 100px;
 }
 
 #smaland img {
-width: 100px;
+  width: 100px;
 }
 
 #oland img {
- width: 100px;
-  
+  width: 100px;
+
 }
 
 #karta img {
- width: 100px;
+  width: 100px;
 }
 
 .grid-item {
@@ -88,9 +83,9 @@ width: 100px;
   justify-self: center;
   margin-top: 30px;
   font-weight: bold;
- }
+}
 
- .grid-item h2 {
+.grid-item h2 {
   margin: 0;
   color: black;
   display: flex;
@@ -130,7 +125,7 @@ select {
   border-radius: 5px;
   color: rgb(2, 39, 18);
   background-color: rgba(255, 255, 255, 0.707);
-cursor: pointer;
+  cursor: pointer;
 }
 
 select:focus {
@@ -146,24 +141,25 @@ option {
 }
 
 #back {
-max-width: 50px;
-max-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  grid-area: Back;
 }
 
 #map {
-    width: 90%;
-    height: 400px;
-    margin-top: 100px;
-    border-radius: 5px 5px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 50px;
+  width: 90%;
+  height: 400px;
+  margin-top: 100px;
+  border-radius: 5px 5px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
 }
 
 #Golfbanor {
-visibility: hidden;
-height: 1px;
-width: 1px;
+  visibility: hidden;
+  height: 1px;
+  width: 1px;
 }
 
 
@@ -178,7 +174,7 @@ width: 1px;
 }
 
 #addrBtns button {
-  background-color: rgba(255, 255, 255, 0.707); 
+  background-color: rgba(255, 255, 255, 0.707);
   border: none;
   color: black;
   margin: 5px;
@@ -189,3 +185,361 @@ width: 1px;
   border-radius: 5px 5px;
 }
 
+
+p#Holes {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+}
+
+p#shop {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+}
+
+p#Restaurant {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+p#Boende {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+p#Range {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-align: center;
+}
+
+
+#KartaMaps {
+  width: 90%;
+  height: 400px;
+  margin-top: 100px;
+  border-radius: 5px 5px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+
+
+p#Par {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+  margin: 2px;
+}
+
+p#Webb {
+  grid-area: Webb;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.707);
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  font-size: 1em;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px 5px;
+}
+
+#web {
+  height: 50px;
+  width: 70px;
+
+}
+
+p#SlopeT {
+  grid-area: SlopeT;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#back1 {
+  grid-area: Tillbaka;
+  width: 50px;
+}
+
+p#Namn {
+  grid-area: Namn;
+  font-weight: bold;
+  font-size: 2.5em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  place-self: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.Ikoner {
+  width: 70px;
+  height: 70px;
+  margin: 7px;
+
+
+}
+
+p#Text {
+  grid-area: Text1;
+  width: 350px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.707);
+  border-radius: 5px 5px;
+  padding: 10px;
+  margin-top: 0;
+
+}
+
+#Pris {
+  font-size: 25px;
+  color: black;
+  margin-left: 200px;
+  margin-top: 140px;
+  padding: 5px;
+  border-radius: 10%;
+  background-color: rgba(255, 255, 255, 0.707);
+
+}
+
+#Betyg {
+  font-size: 25px;
+  color: black;
+  margin-right: 150px;
+  margin-top: 140px;
+  -webkit-text-stroke: 0.1px black;
+  background-color: rgba(255, 255, 255, 0.707);
+  padding: 5px;
+  border-radius: 10%;
+}
+
+#Golf {
+  width: 360px;
+  height: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-area: BildAPI;
+  display: flex;
+
+}
+
+p.Bild {
+  grid-area: Bild;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  place-self: center;
+
+}
+
+div#PrisAPI {
+  width: 100px;
+}
+
+#DivIkoner {
+  grid-area: DivIkoner;
+  display: flex;
+  width: 350px;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  place-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  place-self: center;
+  font-size: 0.85em;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#NamnAPI {
+  grid-area: NamnAPI;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+#BetygAPI {
+
+  font-size: 18px;
+  text-align: right;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+#PrisAPI {
+  font-size: 18px;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+#AvståndAPI {
+
+  font-size: 18px;
+  text-align: right;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#KartaBtn{
+  background-color: white;
+  font-size: 30px;
+  grid-area: KartaBtn;
+  width: 140px;
+height: 40px;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: center;
+ border-radius: 10%;
+}
+
+#hej {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-area: hej;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  background-color: white;
+  border-radius: 10%;
+  margin-bottom: 50px;
+  margin-top: -10px;
+}
+
+
+@media screen and (max-width: 700px) {
+  #lista1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "Tillbaka"
+      "Namn"
+      "Bild"
+      "DivIkoner"
+      "Webb"
+      "Text1"
+      "KartaBtn"
+    ;
+  }
+
+  div[id^="id-"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "NamnAPI"
+      "BildAPI"
+      "hej"
+    ;
+
+  }
+
+}
+
+
+@media screen and (min-width: 700px) {
+  #close img {
+    width: 200px;
+    grid-area: close;
+  }
+
+  #smaland img {
+    width: 200px;
+    grid-area: smaland;
+  }
+
+  #oland img {
+    width: 200px;
+    grid-area: oland;
+  }
+
+  #karta img {
+    width: 200px;
+    grid-area: karta;
+  }
+
+  #Golf img {
+    width: 600px;
+  }
+
+  .grid-item {
+    margin: 40px;
+  }
+
+  #Golf {
+    width: 500px;
+    height: 300px;
+  }
+
+  #Betyg {
+    font-size: 25px;
+    color: black;
+    margin-right: 315px;
+    margin-top: 140px;
+    -webkit-text-stroke: 0.1px black;
+    background-color: rgba(255, 255, 255, 0.707);
+    padding: 5px;
+    border-radius: 10%;
+  }
+
+  #BetygS {
+    margin-right: 1000px;
+  }
+
+  #header1 {
+    font-size: 6em;
+    margin-bottom: 100px;
+  }
+
+  #nya {
+    margin-top: 70px;
+  }
+
+}
