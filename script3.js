@@ -21,9 +21,10 @@ var Show = true
 var jsonLat;
 var jsonLng;
 var jsonBild;
+var Golfboll
 
 function init() {
-  KartaMaps = document.getElementById("KartaBtn").addEventListener("click", ShowMap);
+    KartaMaps = document.getElementById("KartaBtn").addEventListener("click", ShowMap);
     smapilistor = document.getElementById("lista1");
     smapilistor2 = document.getElementById("listajson");
     golfbanorELem = document.getElementById("Golfbanor");
@@ -123,13 +124,13 @@ function displayResponseText(responseText, selectedID) {
 
             smapitext2 += "<div onclick='addElement(" + item.id + ")' id='id-" + item.id + "'> " +
 
-                "<div id=NamnAPI>"  + item.name  + "</div>" + "<div id=hej>" +
+                "<div id=NamnAPI>"  + item.name  + "</div>" + "<div id=ratingprice>" +
 
-                "<p id=BetygAPI>"  + parseFloat(item.rating).toFixed(1) + "/5 <img src='img/star.png' alt='star' id='star'></p>" +
+                "<p id=BetygAPI>"  + parseFloat(item.rating).toFixed(1) + "/5 <img src='img/stars/star.png' alt='star' id='star'></p>" +
 
-                "<p id=PrisAPI>" + item.price_range + " kr" +"</p>"  +
+                "<p id=PrisAPI>" + item.price_range + " kr <img src ='img/money.png' alt='money' id='money'></p>"  +
 
-                "<p id=AvståndAPI>" + parseFloat(item.distance_in_km).toFixed(1) + " km" + "</p>" + "</div></div>" ;
+                "<p id=AvståndAPI>" + parseFloat(item.distance_in_km).toFixed(1) + " km <img src ='img/route.png' alt='route' id='route'></p>" + "</div></div>" ;
 
                 smapilistor2.innerHTML = smapitext2;
 
@@ -200,8 +201,12 @@ function showMoreInfoJson(responseText, selectedID) {
             let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a></p>" : "";
 
             let Par = Golfbanor[i].Par !== undefined ? "<p id=Par><b></b><img class=Ikoner src='" + golfpar + "'alt=golfpar'>" + Golfbanor[i].Par + "</p>" : "";
+            
+            let PrisBild = Golfbanor[i].PrisBild !== undefined ? "<p class=Bild id=PrisBild><b></b>" + Golfbanor[i].PrisBild + "</p>" : "";
 
             let type = Golfbanor[i].type !== undefined ? smapitext += "<h3>" + Golfbanor[i].type + "</h3>" : "";
+
+            
 
 
             smapitext += Namn +
@@ -215,13 +220,16 @@ function showMoreInfoJson(responseText, selectedID) {
                 Shop +
                 SlopeT +
                 "</div>" +
-                text +
+                text + 
                 Bild +
+                "<div id=betygpriser>" + 
+                Betyg +
                 BetygS +
-                Pris +
+                Pris + 
+                PrisBild +
+                "</div>" + 
                 Webb +
-                Tillbaka +
-                Betyg;
+                Tillbaka;
 
             
         }
@@ -231,7 +239,7 @@ function showMoreInfoJson(responseText, selectedID) {
 
 
 function ShowMap() {
-
+    console.log(latitude, longitude)
     if (Show) {
         Show = false;
         document.getElementById("KartaMaps").classList.remove("hidden");
@@ -247,6 +255,7 @@ function ShowMap() {
         const marker2 = new google.maps.Marker({
             position: { lat: latitude, lng: longitude},
             map: KartaMaps,
+    
         });
         const directionsService = new google.maps.DirectionsService();
         const directionsRenderer = new google.maps.DirectionsRenderer();

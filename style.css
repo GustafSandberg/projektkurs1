@@ -3,8 +3,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #b0e3b4;
-  background-image: linear-gradient(62deg, #b0e3b4 0%, #ffffff 99%, #ffffff 100%);
+  background-color: rgb(221, 199, 199);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -26,6 +25,7 @@ h1 {
   display: fle;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: fit-content;
 }
 
 .grid-container {
@@ -38,7 +38,6 @@ h1 {
   font-size: 1.16em;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .hidden {
@@ -60,6 +59,7 @@ display: none;
 .grid-item {
   text-align: center;
   padding: 15px;
+  cursor: pointer;
 }
 
 #close img {
@@ -145,8 +145,8 @@ option {
 }
 
 #back {
-  max-width: 50px;
-  max-height: 50px;
+  width: 50px;
+  height: 50px;
   grid-area: Back;
 }
 
@@ -284,31 +284,24 @@ p#SlopeT {
 
 }
 
-#back1 {
-  grid-area: Tillbaka;
-  width: 50px;
-}
+
 
 p#Namn {
   grid-area: Namn;
+  text-align: center;
+  font-size: 20px;
   font-weight: bold;
-  font-size: 2.1em;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  place-items: center;
-  place-content: center;
-  place-self: center;
-  margin-top: 0px;
-  margin-bottom: 10px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+  margin-bottom: -15px;
 }
 
 .Ikoner {
   width: 70px;
   height: 70px;
   margin: 7px;
-
-
 }
 
 p#Text {
@@ -328,27 +321,9 @@ p#Text {
 
 }
 
-#Pris {
-  font-size: 25px;
-  color: black;
-  margin-left: 200px;
-  margin-top: 140px;
-  padding: 5px;
-  border-radius: 10%;
-  background-color: rgba(255, 255, 255, 0.707);
 
-}
 
-#Betyg {
-  font-size: 25px;
-  color: black;
-  margin-right: 150px;
-  margin-top: 140px;
-  -webkit-text-stroke: 0.1px black;
-  background-color: rgba(255, 255, 255, 0.707);
-  padding: 5px;
-  border-radius: 10%;
-}
+
 
 #Golf {
   width: 360px;
@@ -368,7 +343,6 @@ p.Bild {
   place-items: center;
   place-content: center;
   place-self: center;
-
 }
 
 div#PrisAPI {
@@ -418,16 +392,22 @@ body {
 #BetygAPI {
   font-size: 18px;
   margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #PrisAPI {
   font-size: 18px;
-  margin-left: 35px ;
+  margin-left: 30px;
   margin-right: 30px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 #AvståndAPI {
   font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
   
 }
 
@@ -444,11 +424,11 @@ body {
   cursor: pointer;
 }
 
-#hej {
+#ratingprice {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  grid-area: hej;
+  grid-area: ratingprice;
   margin-left: auto;
   margin-right: auto;
   width: 360px;
@@ -467,7 +447,61 @@ div[id^="id-"] {
 width: 20px;  
 }
 
+#money {
+width: 20px;  
+}
 
+#route {
+width: 20px;  
+}
+p#BetygS {
+  margin-top: 0;
+  margin-bottom: 0;  
+}
+#BetygS img {
+width: 20px; 
+}
+
+#PrisBild img {
+width: 20px;  
+}
+
+p#PrisBild {
+margin-top: 0;
+margin-bottom: 0;  
+}
+
+#Betyg {
+font-size: 18px;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+#Pris {
+font-size: 18px;
+margin-top: 0;
+margin-bottom: 0;
+margin-left: 30px;
+}
+
+#betygpriser {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-area: betygpriser;
+  justify-content: center;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+  background-color: white;
+  margin-top: -15px;
+}
+
+#back1 {
+  grid-area: Tillbaka;
+  width: 50px;
+}
 
 @media screen and (max-width: 700px) {
   #lista1 {
@@ -475,9 +509,10 @@ width: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "Tillbaka"
+      "Back"
       "Namn"
       "Bild"
+      "betygpriser"
       "DivIkoner"
       "Webb"
       "Text1"
@@ -492,7 +527,7 @@ width: 20px;
     grid-template-areas:
       "NamnAPI"
       "BildAPI"
-      "hej"
+      "ratingprice"
     ;
 
   };
@@ -503,6 +538,12 @@ width: 20px;
   #close img {
     width: 200px;
     grid-area: close;
+  }
+
+  #BetygS img {
+  grid-area: stars;  
+  margin-top: 0;
+  margin-bottom: 0;
   }
 
   #smaland img {
@@ -534,18 +575,7 @@ width: 20px;
   }
 
   #Betyg {
-    font-size: 25px;
-    color: black;
-    margin-right: 315px;
-    margin-top: 140px;
-    -webkit-text-stroke: 0.1px black;
-    background-color: rgba(255, 255, 255, 0.707);
-    padding: 5px;
-    border-radius: 10%;
-  }
-
-  #BetygS {
-    margin-right: 1000px;
+    font-size: 18px;
   }
 
   #header1 {
@@ -564,7 +594,7 @@ width: 20px;
     grid-template-areas:
       "NamnAPI"
       "BildAPI"
-      "hej"
+      "ratingprice"
     ;
     margin-right: 20px;
     margin-left: 20px;
@@ -578,18 +608,52 @@ justify-content: center;
 justify-items: center;
   }
 
-#hej {
-width: 500px; 
-
-justify-content: center;
-
-}
-
 #NamnAPI {
 width: 500px;  
 }
 
+#ratingprice {
+width: 500px; 
+justify-items: center;
+justify-content: center;
+}
 h1 {
 font-size: 4em;  
+}
+
+#lista1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:auto;
+  grid-template-areas:
+  "Tillbaka ."
+  "Namn Text1"
+  "Bild DivIkoner"
+  "betygpriser KartaBtn"
+  ;
+
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  justify-self: center;
+}
+
+#betygpriser {
+width: 500px;  
+}
+
+#back {
+width: 100px;  
+height: 100px;
+}
+
+p#Namn {
+width: 500px;  
+}
+
+#back1 {
+width: 100px;
+height: 100px;
+margin-top: 0;
 }
 }

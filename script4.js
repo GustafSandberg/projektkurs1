@@ -413,7 +413,7 @@ function displayResponseText(responseText, selectedID) {
 
             smapitext2 += "<div onclick='addElement(" + item.id + ")' id='id-" + item.id + "'> " +
 
-                "<div id=NamnAPI>"  + item.name  + "</div>" + "<div id=hej>" +
+                "<div id=NamnAPI>"  + item.name  + "</div>" + "<div id=ratingprice>" +
 
                 "<p id=BetygAPI>"  + parseFloat(item.rating).toFixed(1) + "/5 <img src='img/star.png' alt='star' id='star'></p>" +
 
@@ -514,11 +514,14 @@ function showMoreInfoJson(responseText, selectedID) {
                 "</div>" +
                 text +
                 Bild +
+                "<div id=betygpriser>" + 
+                Betyg +
                 BetygS +
-                Pris +
+                Pris + 
+                "</div>" + 
                 Webb +
-                Tillbaka +
-                Betyg;
+                Tillbaka;
+               
 
             
         }

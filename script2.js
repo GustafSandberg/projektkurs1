@@ -107,7 +107,7 @@ function displayResponseText(responseText, selectedID) {
 
             smapitext2 += "<div onclick='addElement(" + item.id + ")' id='id-" + item.id + "'> " +
 
-                "<div id=NamnAPI>"  + item.name  + "</div>" + "<div id=hej>" +
+                "<div id=NamnAPI>"  + item.name  + "</div>" + "<div id=ratingprice>" +
 
                 "<p id=BetygAPI>"  + parseFloat(item.rating).toFixed(1) + "/5 <img src='img/star.png' alt='star' id='star'></p>" +
 
@@ -186,7 +186,7 @@ function showMoreInfoJson(responseText, selectedID) {
 
             let Webb = Golfbanor[i].Webb !== undefined ? "<p id=Webb><b></b>" + Golfbanor[i].Webb + "</p>" : "";
 
-            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index2.html><img id=back1 src=img/back.png alt=backbutton></a></p>" : "";
+            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index2.html><img id=back1 src=img/back.png alt=backbutton>Tillbaka</a></p>" : "";
 
             let Par = Golfbanor[i].Par !== undefined ? "<p id=Par><b></b><img class=Ikoner src='" + golfpar + "'alt=golfpar'>" + Golfbanor[i].Par + "</p>" : "";
 
@@ -206,11 +206,14 @@ function showMoreInfoJson(responseText, selectedID) {
                 "</div>" +
                 text +
                 Bild +
+                "<div id=betygpriser>" + 
+                Betyg +
                 BetygS +
-                Pris +
+                Pris + 
+                "</div>" + 
                 Webb +
-                Tillbaka +
-                Betyg;
+                Tillbaka;
+              
 
 
         }
