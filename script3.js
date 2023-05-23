@@ -17,18 +17,16 @@ var smapitext2;
 var header;
 var golfpar;
 var KartaMaps;
-var MapsID
 var Show = true
-var jsonLat
-var jsonLng
-var jsonBild
+var jsonLat;
+var jsonLng;
+var jsonBild;
 
 function init() {
-
+  KartaMaps = document.getElementById("KartaBtn").addEventListener("click", ShowMap);
     smapilistor = document.getElementById("lista1");
     smapilistor2 = document.getElementById("listajson");
     golfbanorELem = document.getElementById("Golfbanor");
-    KartaMaps = document.getElementById("KartaBtn").addEventListener("click", ShowMap);
     shopbild = document.getElementById("shopbild").src;
     golfclub = document.getElementById("golfclub").src;
     golffield = document.getElementById("golffield").src;
@@ -39,6 +37,7 @@ function init() {
     tabell = document.getElementById("sloptabell").src;
     header = document.getElementById("header");
     golfpar = document.getElementById("golfpar").src;
+    
 
 
     getCurrentPosition(function (position) {
@@ -106,7 +105,6 @@ function smapi2() {
             if (request.status == 200) {
                 displayResponseText(request.responseText);
             }
-
             else smapilistor.innerHTML = "Servern hittades inte";
     };
 
@@ -118,10 +116,7 @@ function displayResponseText(responseText, selectedID) {
     var jsonResponse = JSON.parse(responseText);
     var smapitext2 = "";
 
-
     if (smapilistor != null) {
-
-
 
         for (var i = 0; i < jsonResponse.payload.length; i++) {
             var item = jsonResponse.payload[i];
@@ -130,28 +125,20 @@ function displayResponseText(responseText, selectedID) {
 
                 "<div id=NamnAPI>"  + item.name  + "</div>" + "<div id=hej>" +
 
-                "<p id=BetygAPI>"  + parseFloat(item.rating).toFixed(1) + "/5 stjärnor" + "</p>" +
+                "<p id=BetygAPI>"  + parseFloat(item.rating).toFixed(1) + "/5 <img src='img/star.png' alt='star' id='star'></p>" +
 
-                "<p id=PrisAPI>" + item.price_range + "Kr" +"</p>"  +
+                "<p id=PrisAPI>" + item.price_range + " kr" +"</p>"  +
 
                 "<p id=AvståndAPI>" + parseFloat(item.distance_in_km).toFixed(1) + " km" + "</p>" + "</div></div>" ;
 
-
-
-            smapilistor2.innerHTML = smapitext2;
-
-
+                smapilistor2.innerHTML = smapitext2;
 
         }
     }
     requestPic(responseText);
 }
 
-
-
-
 function addElement(id) {
-    console.log("tja")
     let request = new XMLHttpRequest();
 
     request.open("GET", "golfklubbar.json?id=" + id, true);
@@ -168,11 +155,9 @@ function addElement(id) {
 }
 
 function showMoreInfoJson(responseText, selectedID) {
-    console.log("ejsan")
     var jsonResponse = JSON.parse(responseText);
     let smapitext = "";
-
-    console.log(jsonResponse.Golfbanor.length)
+    document.getElementById("KartaBtn").classList.remove("hidden");
 
     for (var i = 0; i < jsonResponse.Golfbanor.length; i++) {
         var Golfbanor = jsonResponse.Golfbanor;
@@ -212,7 +197,7 @@ function showMoreInfoJson(responseText, selectedID) {
 
             let Webb = Golfbanor[i].Webb !== undefined ? "<p id=Webb><b></b>" + Golfbanor[i].Webb + "</p>" : "";
 
-            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b>" + Golfbanor[i].Tillbaka + "</p>" : "";
+            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a></p>" : "";
 
             let Par = Golfbanor[i].Par !== undefined ? "<p id=Par><b></b><img class=Ikoner src='" + golfpar + "'alt=golfpar'>" + Golfbanor[i].Par + "</p>" : "";
 
@@ -240,7 +225,6 @@ function showMoreInfoJson(responseText, selectedID) {
 
             
         }
-        console.log(smapilistor);
         smapilistor.innerHTML = smapitext;
     }
 }
@@ -250,7 +234,7 @@ function ShowMap() {
 
     if (Show) {
         Show = false;
-        document.getElementById("KartaMaps").style.visibility = "visible";
+        document.getElementById("KartaMaps").classList.remove("hidden");
         KartaMaps = new google.maps.Map(document.getElementById("KartaMaps"), {
             zoom: 6.5,
             center: { lat: 57.4254, lng: 15.0865 },
@@ -259,6 +243,26 @@ function ShowMap() {
         const marker = new google.maps.Marker({
             position: { lat: Number(jsonLat), lng: Number(jsonLng) },
             map: KartaMaps,
+        });
+        const marker2 = new google.maps.Marker({
+            position: { lat: latitude, lng: longitude},
+            map: KartaMaps,
+        });
+        const directionsService = new google.maps.DirectionsService();
+        const directionsRenderer = new google.maps.DirectionsRenderer();
+        
+        directionsRenderer.setMap(KartaMaps);
+        
+        const request = {
+            origin: { lat: latitude, lng: longitude  },
+            destination: { lat: Number(jsonLat), lng: Number(jsonLng)},
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        
+        directionsService.route(request, function(result, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsRenderer.setDirections(result);
+            }
         });
     }
     else {
@@ -294,7 +298,7 @@ function ShowPic(responseText, smapiRes) {
 
         for (var j = 0; j < golfbanor.length; j++) {
             if (bildID == golfbanor[j].id) {
-                let Bild = golfbanor[j].Bild !== undefined ? "<p ><b></b>" + golfbanor[j].Bild + "</p>" : "";
+                let Bild = golfbanor[j].Bild !== undefined ? "<p><b></b>" + golfbanor[j].Bild + "</p>" : "";
                 document.getElementById("id-" + bildID).innerHTML += Bild;
             }
         }

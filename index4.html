@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golf Öland</title>
-    <link rel="stylesheet" type="text/css" href="style.css"> <link rel="stylesheet" type="text/css" href="json.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script4.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDeCKL3vPx41FAS0Q0mGjpLdiqa07Vd30"></script>
 </head>
 
 <body>
@@ -17,9 +18,10 @@
 
         <label for="Sortera">Sortera efter</label>
         <select id="sortera">
-            <option id="AvståndLista" selected> Avstånd</option>
-            <option id="PrisLista">Pris</option>
-            <option id="BetygLista">Betyg</option>
+            <option id="Avstånd" selected> Avstånd</option>
+            <option id="Pris1">Pris högt till lågt</option>
+            <option id="Pris2">Pris lågt till högt</option>
+            <option id="Betyg">Betyg</option>
         </select>
     </header>
 
@@ -37,9 +39,8 @@
 
     <div id="lista1"></div>
     <div id="listajson"></div>
-
-
-
+    <p id="KartaBtn" class="hidden">Karta</p>
+    <div id="KartaMaps" class="hidden"></div>
 
 
 </body>

@@ -16,7 +16,7 @@
             "Betyg": "4,5/5 stjärnor",
             "Bild": "<img id=Golf src='img/courses/course6.jpg'>",
             "Webb": "<a href='http://www.a6gk.se'>Webbsida</a>",
-            "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
+            "Tillbaka": "",
             "Lat": "57.762352",
             "Lng":"14.211483"
 
@@ -137,7 +137,7 @@
         },
         {
             "id": "60",
-            "Namn": "Figeholm Golf & Country Club",
+            "Name": "Figeholm Golf & Country Club",
             "Holes": "9 hål",
             "BetygS": "<img src='img/stars/twostar.png'>",
             "Pris": "250-500kr",
@@ -213,7 +213,7 @@
         },
         {
             "id": "64",
-            "Name": "Götaströms GK",
+            "Name": "Götaströms Golfklubb",
             "Restaurant": "Restaurang",
             "Holes": "18 hål",
             "Shop": "Shop",
@@ -251,7 +251,7 @@
         },
         {
             "id": "66",
-            "Name": "Jönköping Gk",
+            "Name": "Jönköping Golfklubb",
             "Restaurant": "Restaurang",
             "Holes": "18 och 9 hål",
             "Shop": "Shop",
@@ -355,8 +355,8 @@
             "Pris": "250-500kr",
             "Betyg": "2,5/5 stjärnor",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.032751",
-            "lng": "16.437558"
+            "Lat": "57.032751",
+            "Lng": "16.437558"
         },
         {
             "id": "72",
@@ -373,8 +373,8 @@
             "Pris": "100-250kr",
             "Betyg": "2,5/5 stjärnor",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "56.447787",
-            "lng": "16.092606"
+            "Lat": "56.447787",
+            "Lng": "16.092606"
         },
         {
             "id": "73",
@@ -393,8 +393,8 @@
             "Pris": "250-500kr",
             "Betyg": "2,5/5 stjärnor",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "56.695157",
-            "lng": "15.984055"
+            "Lat": "56.695157",
+            "Lng": "15.984055"
         },
         {
             "id": "74",
@@ -413,8 +413,8 @@
             "Text": "Klubben: Bildad 1973 som Fliseryds Golfklubb.\nBanan: 18 h\u00e5l, Par 70, Gul tee 5325m, R\u00f6d tee 4727m.\n\nPark- och skogsbana. De f\u00f6rsta 9 h\u00e5len blev klara 1978.\nD\u00e4refter skedde en successiv utbyggnad till 18 h\u00e5l, som stod f\u00e4rdiga 1986.\n\nKlubbhus med restaurang. Pro, shop med vagn- och klubbuthyrning. \u00d6vningsomr\u00e5de.\n\nArkitekt: \u00c5ke Persson (delvis Nils Sk\u00f6ld)\nL\u00e4ge: Skorpetorps G\u00e5rd, ca 8km fr\u00e5n Oskarshamns centrum.\nInriktning: Banan och klubben har en familjev\u00e4nlig inriktning.\nAntal medlemmar: ca 1100 aktiva, varav ca 200 juniorer.",
             "Betyg": "2,5/5 stjärnor",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.194772",
-            "lng": "16.389016"
+            "Lat": "57.194772",
+            "Lng": "16.389016"
         },
         {
             "id": "75",
@@ -433,8 +433,8 @@
             "Pris": "250-500kr",
             "Betyg": "2,5/5 stjärnor",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.207112",
-            "lng": "14.939133"
+            "Lat": "57.207112",
+            "Lng": "14.939133"
         },
         {
             "id": "76",
@@ -451,8 +451,8 @@
             "Pris": "250-500kr",
             "Betyg": "2,5/5 stjärnor",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.204991",
-            "lng": "13.611208"
+            "Lat": "57.204991",
+            "Lng": "13.611208"
         },
         {
             "id": "77",
@@ -468,8 +468,8 @@
             "Pris": "250-500kr",
             "Betyg": "2,5/5 stjärnor",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "56.835991",
-            "lng": "14.724235"
+            "Lat": "56.835991",
+            "Lng": "14.724235"
         },
         {
             "id": "78",
@@ -487,8 +487,8 @@
             "Pris": "250-500kr",
             "Betyg": "2,5/5 stjärnor",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.904911",
-            "lng": "13.822457"
+            "Lat": "57.904911",
+            "Lng": "13.822457"
         },
         {
             "id": "79",
@@ -507,8 +507,8 @@
             "Pris": "250-500kr",
             "Betyg": "2,5/5 stjärnor",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.850828",
-            "lng": "14.037062"
+            "Lat": "57.850828",
+            "Lng": "14.037062"
         },
         {
             "id": "80",
@@ -526,8 +526,8 @@
             "Webb": "<a href='http:\/\/www.skinnarebo.nu\/'>Webbsida</a>",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "56.692296",
-            "lng": "16.485699"
+            "Lat": "56.692296",
+            "Lng": "16.485699"
         },
         {
             "id": "81",
@@ -545,8 +545,8 @@
             "Pris": "250-500kr",
             "Betyg": "2,5/5 stjärnor", 
              "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-             "lat": "57.711260",
-            "lng": "14.047051"
+             "Lat": "57.711260",
+            "Lng": "14.047051"
 
         },
         {
@@ -565,8 +565,8 @@
             "Pris": "250-500kr",
             "BetygS": "<img src='img/stars/twohalfstar.png'>",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.576204",
-            "lng": "15.803366"
+            "Lat": "57.576204",
+            "Lng": "15.803366"
         },
         {
             "id": "83",
@@ -584,8 +584,8 @@
             "Betyg": "2,5/5 stjärnor",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "58.051440",
-            "lng": "15.003742"
+            "Lat": "58.051440",
+            "Lng": "15.003742"
         },
         {
             "id": "84",
@@ -600,8 +600,8 @@
             "Text": "Banan \u00e4r \u00f6ppen f\u00f6r alla spelare, inkl. Pay & Play, men kravet \u00e4r att det finns en spelare med minst Gr\u00f6nt kort i bollen. Klubbor och vagnar finns att hyra i klubbstugan.",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.142082",
-            "lng": "15.150124"
+            "Lat": "57.142082",
+            "Lng": "15.150124"
         },
         {
             "id": "85",
@@ -619,8 +619,8 @@
             "Webb": "<a href='http:\/\/www.vetlandagk.com\/'>Webbsida</a>",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.410237",
-            "lng": "15.044234"
+            "Lat": "57.410237",
+            "Lng": "15.044234"
         },
         {
             "id": "86",
@@ -636,8 +636,8 @@
             "Webb": "<a href='http:\/\/www.vimmerbygk.se\/om-klubben\/'>Webbsida</a>",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.674179",
-            "lng": "15.884552"
+            "Lat": "57.674179",
+            "Lng": "15.884552"
         },
         {
             "id": "87",
@@ -651,8 +651,8 @@
             "Webb": "<a href='http:\/\/www.visingsogk.se\/>Webbsida</a>",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "58.032797",
-            "lng": "14.323207"
+            "Lat": "58.032797",
+            "Lng": "14.323207"
         },
         {
             "id": "88",
@@ -670,8 +670,8 @@
             "Webb": "<a href='\/\/www.vasterviksgolf.se\/>Webbsida</a>",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.772326",
-            "lng": "16.654882"
+            "Lat": "57.772326",
+            "Lng": "16.654882"
         },
         {
             "id": "89",
@@ -690,8 +690,8 @@
             "Betyg": "2,5/5 stjärnor",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "56.901853",
-            "lng": "14.770866"
+            "Lat": "56.901853",
+            "Lng": "14.770866"
 
         },
         {
@@ -711,8 +711,8 @@
             "Text": "V\u00e5r bana har st\u00e4ngt f\u00f6r g\u00e4stspel f\u00f6r i \u00e5r, vi tackar alla bes\u00f6kare f\u00f6r en fin s\u00e4song och h\u00e4lsar er alla varmt v\u00e4lkomna tillbaka till en ny s\u00e4song n\u00e4sta \u00e5r.",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.910881",
-            "lng": "14.644474"
+            "Lat": "57.910881",
+            "Lng": "14.644474"
         },
         {
             "id": "91",
@@ -731,8 +731,8 @@
             "Betyg": "2,5/5 stjärnor",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "56.564709",
-            "lng": "14.177020"
+            "Lat": "56.564709",
+            "Lng": "14.177020"
         },
         {
             "id": "92",
@@ -751,8 +751,8 @@
             "Betyg": "2,5/5 stjärnor",
             "Pris": "250-500kr",
             "Tillbaka": "<a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a>",
-            "lat": "57.138411",
-            "lng": "16.963828"
+            "Lat": "57.138411",
+            "Lng": "16.963828"
         }
     ]
 }
