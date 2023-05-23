@@ -390,22 +390,21 @@ body {
 }
 
 #BetygAPI {
-  font-size: 18px;
-  margin-left: 20px;
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 #PrisAPI {
-  font-size: 18px;
-  margin-left: 30px;
-  margin-right: 30px;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 0;
   margin-top: 0;
 }
 
 #AvståndAPI {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 0;
   
@@ -434,6 +433,9 @@ body {
   width: 360px;
   background-color: white;
   margin-top: -15px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }
 
 div[id^="id-"] {
@@ -520,6 +522,21 @@ margin-left: 30px;
     ;
   }
 
+  #listajson {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "Namn"
+      "Bild"
+      "betygpriser"
+      "DivIkoner"
+      "Webb"
+      "Text1"
+    ;
+  }  
+  
+
   div[id^="id-"] {
     display: grid;
     grid-template-columns: 1fr;
@@ -529,8 +546,7 @@ margin-left: 30px;
       "BildAPI"
       "ratingprice"
     ;
-
-  };
+  }
 }
 
 
@@ -626,10 +642,11 @@ font-size: 4em;
   grid-template-columns: 1fr 1fr;
   grid-template-rows:auto;
   grid-template-areas:
-  "Tillbaka ."
-  "Namn Text1"
+  "Tillbaka Webb"
+  "Namn ."
   "Bild DivIkoner"
-  "betygpriser KartaBtn"
+  "betygpriser Text1"
+  "KartaBtn ."
   ;
 
   justify-content: center;

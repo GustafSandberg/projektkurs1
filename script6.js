@@ -460,8 +460,6 @@ function showMoreInfo(responseText, selectedID) {
 
 			let Webb = Golfbanor[i].Webb !== undefined ? "<p id=Webb><b></b>" + Golfbanor[i].Webb + "</p>" : "";
 
-			let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index.html><img id=back1 src=img/back.png alt=backbutton></a></p>" : "";
-
 			let Par = Golfbanor[i].Par !== undefined ? "<p id=Par><b></b><img class=Ikoner src='" + golfpar + "'alt=golfpar'>" + Golfbanor[i].Par + "</p>" : "";
 
 			let PrisBild = Golfbanor[i].PrisBild !== undefined ? "<p class=Bild id=PrisBild><b></b>" + Golfbanor[i].PrisBild + "</p>" : "";
@@ -488,8 +486,7 @@ function showMoreInfo(responseText, selectedID) {
 				Pris +
 				PrisBild +
 				"</div>" +
-				Webb +
-				Tillbaka;
+				Webb;
 
 
 

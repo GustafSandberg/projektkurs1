@@ -39,6 +39,7 @@ function init() {
     header = document.getElementById("header");
     golfpar = document.getElementById("golfpar").src;
     
+    
 
 
     getCurrentPosition(function (position) {
@@ -97,6 +98,7 @@ function getCurrentPosition(successCallback, errorCallback) {
 }
 
 function smapi2() {
+    console.log("hej")
     let request = new XMLHttpRequest();
     request.open("GET", "https://smapi.lnu.se/api/?api_key=" + myApiKey + "&controller=establishment&provinces=småland&method=getfromlatlng&descriptions=golfbana&lat=" + latitude + "&lng=" + longitude + "&radius=5000&sort_in=" + sort_in + "&order_by=" + order_by);
 
@@ -198,7 +200,7 @@ function showMoreInfoJson(responseText, selectedID) {
 
             let Webb = Golfbanor[i].Webb !== undefined ? "<p id=Webb><b></b>" + Golfbanor[i].Webb + "</p>" : "";
 
-            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index3.html><img id=back1 src=img/back.png alt=backbutton></a></p>" : "";
+            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index3.html><img id=back1 src=img/back.png alt=backbutton></p>" : "";
 
             let Par = Golfbanor[i].Par !== undefined ? "<p id=Par><b></b><img class=Ikoner src='" + golfpar + "'alt=golfpar'>" + Golfbanor[i].Par + "</p>" : "";
             
@@ -234,6 +236,7 @@ function showMoreInfoJson(responseText, selectedID) {
             
         }
         smapilistor.innerHTML = smapitext;
+       
     }
 }
 
