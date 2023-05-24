@@ -121,7 +121,8 @@ var jsonLat;
 var jsonLng;
 var latitude;
 var longitude;
-
+const directionsService = new google.maps.DirectionsService();
+const directionsRenderer = new google.maps.DirectionsRenderer();	
 
 function init() {
 	mapLocationElem = document.getElementById("mapLocation");
@@ -173,6 +174,7 @@ function getCurrentPosition(successCallback, errorCallback) {
 
 function initMap() {
 
+
 	myMap = new google.maps.Map(document.getElementById("map"), {
 		zoom: 6.5,
 		center: { lat: 57.4254, lng: 15.0865 },
@@ -189,9 +191,9 @@ function initMap() {
 			addElement(markerData[i].id)
 		})
 		marker.addListener("click", function () {
-			hidePath();
-			const directionsService = new google.maps.DirectionsService();
-			const directionsRenderer = new google.maps.DirectionsRenderer();
+			hideMarkers();
+			
+
 			directionsRenderer.setMap(myMap);
 
 			const request = {
@@ -211,7 +213,6 @@ function initMap() {
 }
 
 function hideMarkers() {
-	console.log("path")
 
 	for (let i = 0; i < myMarkers.length; i++) {
 		myMarkers[i].setMap(null);
@@ -219,15 +220,16 @@ function hideMarkers() {
 	}
 }
 
-function hidePath() {
-	console.log("hidempath")
-	const directionsRenderer = new google.maps.DirectionsRenderer();
-	directionsRenderer.setMap(null)
-	console.log(null)
-}
+
 
 function billigast() {
 	hideMarkers();
+	directionsRenderer.setMap(null);
+	
+	myMap = new google.maps.Map(document.getElementById("map"), {
+		zoom: 6.5,
+		center: { lat: 57.4254, lng: 15.0865 },
+	});
 	for (let i = 0; i < markerData2.length; i++) {
 		const marker = new google.maps.Marker({
 			position: markerData2[i].position,
@@ -240,8 +242,7 @@ function billigast() {
 		})
 		marker.addListener("click", function () {
 
-			const directionsService = new google.maps.DirectionsService();
-			const directionsRenderer = new google.maps.DirectionsRenderer();
+			hideMarkers();
 
 			directionsRenderer.setMap(myMap);
 
@@ -264,6 +265,12 @@ function billigast() {
 
 function highcourses() {
 	hideMarkers();
+	directionsRenderer.setMap(null);
+	myMap = new google.maps.Map(document.getElementById("map"), {
+		zoom: 6.5,
+		center: { lat: 57.4254, lng: 15.0865 },
+	});
+
 	for (let i = 0; i < markerData3.length; i++) {
 		const marker = new google.maps.Marker({
 			position: markerData3[i].position,
@@ -275,9 +282,9 @@ function highcourses() {
 			addElement(markerData3[i].id)
 		})
 		marker.addListener("click", function () {
+			hideMarkers();
 
-			const directionsService = new google.maps.DirectionsService();
-			const directionsRenderer = new google.maps.DirectionsRenderer();
+
 
 			directionsRenderer.setMap(myMap);
 
@@ -298,6 +305,12 @@ function highcourses() {
 
 function visaAlla() {
 	hideMarkers();
+	directionsRenderer.setMap(null);
+	myMap = new google.maps.Map(document.getElementById("map"), {
+		zoom: 6.5,
+		center: { lat: 57.4254, lng: 15.0865 },
+	});
+
 	for (let i = 0; i < markerData.length; i++) {
 		const marker = new google.maps.Marker({
 			position: markerData[i].position,
@@ -310,8 +323,8 @@ function visaAlla() {
 		})
 		marker.addListener("click", function () {
 
-			const directionsService = new google.maps.DirectionsService();
-			const directionsRenderer = new google.maps.DirectionsRenderer();
+			hideMarkers();
+
 
 			directionsRenderer.setMap(myMap);
 
@@ -331,8 +344,16 @@ function visaAlla() {
 
 }
 
-function nioHål() {
+function nioHål() {	
 	hideMarkers();
+	directionsRenderer.setMap(null);
+	myMap = new google.maps.Map(document.getElementById("map"), {
+		zoom: 6.5,
+		center: { lat: 57.4254, lng: 15.0865 },
+	});
+
+
+
 	for (let i = 0; i < markerData4.length; i++) {
 		const marker = new google.maps.Marker({
 			position: markerData4[i].position,
@@ -344,9 +365,8 @@ function nioHål() {
 			addElement(markerData4[i].id)
 		})
 		marker.addListener("click", function () {
+			hideMarkers();
 
-			const directionsService = new google.maps.DirectionsService();
-			const directionsRenderer = new google.maps.DirectionsRenderer();
 
 			directionsRenderer.setMap(myMap);
 
@@ -367,6 +387,12 @@ function nioHål() {
 
 function artonHål() {
 	hideMarkers();
+	directionsRenderer.setMap(null);
+	myMap = new google.maps.Map(document.getElementById("map"), {
+		zoom: 6.5,
+		center: { lat: 57.4254, lng: 15.0865 },
+	});
+
 	for (let i = 0; i < markerData5.length; i++) {
 		const marker = new google.maps.Marker({
 			position: markerData5[i].position,
@@ -379,8 +405,8 @@ function artonHål() {
 		})
 		marker.addListener("click", function () {
 
-			const directionsService = new google.maps.DirectionsService();
-			const directionsRenderer = new google.maps.DirectionsRenderer();
+			hideMarkers();
+
 
 			directionsRenderer.setMap(myMap);
 

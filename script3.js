@@ -200,11 +200,13 @@ function showMoreInfoJson(responseText, selectedID) {
 
             let Webb = Golfbanor[i].Webb !== undefined ? "<p id=Webb><b></b>" + Golfbanor[i].Webb + "</p>" : "";
 
-            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index3.html><img id=back1 src=img/back.png alt=backbutton></p>" : "";
+            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index3.html><img id=back1 src=img/cross.png alt=backbutton></p>" : "";
 
             let Par = Golfbanor[i].Par !== undefined ? "<p id=Par><b></b><img class=Ikoner src='" + golfpar + "'alt=golfpar'>" + Golfbanor[i].Par + "</p>" : "";
             
-            let PrisBild = Golfbanor[i].PrisBild !== undefined ? "<p class=Bild id=PrisBild><b></b>" + Golfbanor[i].PrisBild + "</p>" : "";
+            let PrisBild = Golfbanor[i].PrisBild !== undefined ? "<p class=Bild id=PrisBild <b></b>" + Golfbanor[i].PrisBild + "</p>" : "";
+
+            let Hem = Golfbanor[i].Hem !== undefined ? "<p><b></b><a href=index.html><img id=hem src=img/home.png alt=homeBTN></p>" : "";
 
             let type = Golfbanor[i].type !== undefined ? smapitext += "<h3>" + Golfbanor[i].type + "</h3>" : "";
 
@@ -231,12 +233,13 @@ function showMoreInfoJson(responseText, selectedID) {
                 PrisBild +
                 "</div>" + 
                 Webb +
-                Tillbaka;
+                "<div id=Navigering>" +
+                Hem + 
+                Tillbaka + "</div>";
 
             
         }
-        smapilistor.innerHTML = smapitext;
-       
+        smapilistor.innerHTML = smapitext;    
     }
 }
 
