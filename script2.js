@@ -107,19 +107,18 @@ function displayResponseText(responseText, selectedID) {
 
             smapitext2 += "<div onclick='addElement(" + item.id + ")' id='id-" + item.id + "'> " +
 
-                "<div id=NamnAPI>"  + item.name  + "</div>" + "<div id=ratingprice>" +
+            "<div id=NamnAPI>" + item.name + "</div>" + "<div id=ratingprice>" +
 
-                "<p id=BetygAPI>"  + parseFloat(item.rating).toFixed(1) + "/5 <img src='img/star.png' alt='star' id='star'></p>" +
+            "<p id=BetygAPI>" + parseFloat(item.rating).toFixed(1) + "/5 <img src='img/stars/star.png' alt='star' id='star'></p>" +
 
-                "<p id=PrisAPI>" + item.price_range + " kr" +"</p>"  +
+            "<p id=PrisAPI>" + item.price_range + " kr <img src ='img/money.png' alt='money' id='money'></p>" +
 
-                "<p id=AvståndAPI>" + parseFloat(item.distance_in_km).toFixed(1) + " km" + "</p>" + "</div></div>" ;
+            "<p id=AvståndAPI>" + parseFloat(item.distance_in_km).toFixed(1) + " km <img src ='img/route.png' alt='route' id='route'></p>" + "</div></div>";
 
+        smapilistor2.innerHTML = smapitext2;
 
-
-            smapilistor2.innerHTML = smapitext2;
-
-        }
+    }
+        
 
     }
     requestPic(responseText);
@@ -186,12 +185,15 @@ function showMoreInfoJson(responseText, selectedID) {
 
             let Webb = Golfbanor[i].Webb !== undefined ? "<p id=Webb><b></b>" + Golfbanor[i].Webb + "</p>" : "";
 
-            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index2.html><img id=back1 src=img/back.png alt=backbutton>Tillbaka</a></p>" : "";
+            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index3.html><img id=back1 src=img/cross.png alt=backbutton></p>" : "";
 
             let Par = Golfbanor[i].Par !== undefined ? "<p id=Par><b></b><img class=Ikoner src='" + golfpar + "'alt=golfpar'>" + Golfbanor[i].Par + "</p>" : "";
 
-            let type = Golfbanor[i].type !== undefined ? smapitext += "<h3>" + Golfbanor[i].type + "</h3>" : "";
+            let PrisBild = Golfbanor[i].PrisBild !== undefined ? "<p class=Bild id=PrisBild <b></b>" + Golfbanor[i].PrisBild + "</p>" : "";
 
+            let Hem = Golfbanor[i].Hem !== undefined ? "<p><b></b><a href=index.html><img id=hem src=img/home.png alt=homeBTN></p>" : "";
+
+            let type = Golfbanor[i].type !== undefined ? smapitext += "<h3>" + Golfbanor[i].type + "</h3>" : "";
 
             smapitext += Namn +
                 "<div id=DivIkoner>" +
@@ -206,15 +208,16 @@ function showMoreInfoJson(responseText, selectedID) {
                 "</div>" +
                 text +
                 Bild +
-                "<div id=betygpriser>" + 
+                "<div id=betygpriser>" +
                 Betyg +
                 BetygS +
-                Pris + 
-                "</div>" + 
+                Pris +
+                PrisBild +
+                "</div>" +
                 Webb +
-                Tillbaka;
-              
-
+                "<div id=Navigering>" +
+                Hem +
+                Tillbaka + "</div>";
 
         }
         smapilistor.innerHTML = smapitext;
@@ -272,7 +275,7 @@ function ShowMap() {
     }
     else {
         Show = true;
-        document.getElementById("KartaMaps").style.visibility = "hidden";
+        document.getElementById("KartaMaps").classList.add("hidden");
     }
 
 }
