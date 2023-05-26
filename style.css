@@ -3,8 +3,10 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
- background-color: rgb(85, 134, 186);
-background-size:contain;
+background-image: url(img/golfaa.jpg);
+background-size:cover;
+background-repeat: repeat;
+background-position: right;
 }
 
 body {
@@ -30,7 +32,7 @@ footer {
 }
 
 footer img {
-width: 1000px; 
+width: 50px; 
 }
 #header1 {
   font-family: monospace;
@@ -508,7 +510,8 @@ p#Namn {
   background-color:  rgba(255, 255, 255, 0.707);
   margin-left: auto;
   margin-right: auto;
-  width: 360px;
+  min-width: 360px;
+  max-width: 900px;
   height: 30px;
   margin-bottom: -16px;
   padding-top: 3px;
@@ -524,7 +527,8 @@ p#Namn {
   justify-items: center;
   margin-left: auto;
   margin-right: auto;
-  width: 360px;
+  min-width: 360px;
+  max-width: 550px;
   background-color:  rgba(255, 255, 255, 0.707); 
   margin-top: -16px;
   padding-top: 3px;
@@ -575,6 +579,21 @@ p#Namn {
       "Webb"
       "Text1"
     ;
+  }
+  p#Namn {
+    grid-area: Namn;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color:  rgba(255, 255, 255, 0.707);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    min-width: 360px;
+    height: 30px;
+    margin-bottom: -16px;
+    padding-top: 3px;
+    padding-bottom: 3px;
   }
 
   #listajson {
@@ -737,7 +756,7 @@ justify-content: center;
   }
 
   p#Namn {
-    width: 500px;
+    max-width: 900px;
     margin: 0;
     height: fit-content;
     justify-content: center;
@@ -779,6 +798,8 @@ justify-content: center;
 
   #Navigering {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   order: 0;  
   }
 
@@ -787,15 +808,9 @@ justify-content: center;
     justify-self: center;
     order: 5;
     }
-/*#lista1 img#Golf  { 
-  margin-top: -225px;
-  justify-content: center;
-  justify-self: center;
-  max-width: 370px;
-}*/
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1200px) {
   #hem {
     margin-left: 0;
     margin-right: 750px;
@@ -836,3 +851,117 @@ width: 370px;
 width: 370px;  
 }
 }
+
+@media screen and (min-width: 1050px) {
+  #hem {
+    margin-left: 0;
+    margin-right: 600px;
+    }  
+  p#Namn {
+    width: 1200px;
+    font-size: 4em;
+    height: fit-content;
+  }
+#betygpriser {
+width: 30%;
+font-weight: bold;
+font-size: 2.5em;
+margin-top: 0;  
+margin-left: 150px;
+}
+
+p#Text {
+margin-top: 50px;  
+font-size: 1.5em;
+margin-right: 5px;
+margin-left: 5px;
+}
+
+p#Webb {
+width: 25%;  
+font-size: 1.6em;
+background: none;
+margin-right: 150px;
+}
+
+
+#DivIkoner {
+width: 370px;
+}
+
+#lista1 img#Golf {
+width: 370px;  
+}
+}
+
+@media screen and (min-width: 1100px) {
+  #hem {
+    margin-right: 450px;
+    }
+    p#Namn {
+      max-width: 900px;
+    }
+  }  
+  @media screen and (min-width: 1000px) {
+    #hem {
+      margin-left: 0;
+      margin-right: 350px;
+      }
+      p#Namn {
+        max-width: 900px;
+      }
+      #betygpriser {
+        max-width: 500px;
+        font-weight: bold;
+        font-size: 2.5em;
+        margin-top: 0;  
+        margin-left: 150px;
+        }
+
+        p#Webb {
+        width: 150;
+        margin-right: 70px;  
+        }
+
+    }  
+@media screen and (min-width: 900px) {
+  #hem {
+    margin-left: 50;
+    margin-right:350px;
+    }  
+  p#Namn {
+    max-width: 900px;
+    font-size: 4em;
+    height: fit-content;
+  }
+#betygpriser {
+  width: 550px;
+}
+
+#Pris {
+margin-left: 20px;  
+}
+
+p#Text {
+margin-top: 50px;  
+font-size: 1.5em;
+margin-right: 5px;
+margin-left: 5px;
+}
+
+p#Webb {
+width: 25%;  
+font-size: 1.6em;
+background: none;
+}
+
+
+#DivIkoner {
+width: 370px;
+}
+
+#lista1 img#Golf {
+width: 370px;  
+} 
+}
+
