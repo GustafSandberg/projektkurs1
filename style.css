@@ -6,7 +6,7 @@ body {
   background-image: url(img/golfaa.jpg);
   background-size: cover;
   background-repeat: repeat;
-  background-position: top;
+  background-position: right;
 }
 
 html {
@@ -48,6 +48,11 @@ h1 {
   align-items: center;
 }
 
+.grid-container h2 {
+background-color: rgba(255, 255, 255, 0.707);
+border-radius: 5px 5px;
+}
+
 .hidden {
   display: none;
 }
@@ -65,20 +70,20 @@ h1 {
 }
 
 #close img {
-  width: 100px;
+  width: 120px;
 }
 
 #smaland img {
-  width: 100px;
+  width: 120px;
 }
 
 #oland img {
-  width: 100px;
+  width: 120px;
 
 }
 
 #karta img {
-  width: 100px;
+  width: 120px;
 }
 
 .grid-item {
@@ -86,8 +91,8 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   justify-self: center;
   margin-top: 30px;
   font-weight: bold;
@@ -322,8 +327,6 @@ p.Bild {
   align-items: center;
   justify-content: center;
   display: flex;
-  place-items: center;
-  place-content: center;
   place-self: center;
   border-radius: 5px 5px;
 }
@@ -338,14 +341,9 @@ div#PrisAPI {
   width: 360px;
   flex-direction: row;
   align-items: center;
-  align-content: center;
-  place-content: center;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   display: flex;
-  place-items: center;
-  place-content: center;
   place-self: center;
   font-size: 0.85em;
   background-color: rgba(255, 255, 255, 0.707);
@@ -402,6 +400,9 @@ div#PrisAPI {
   justify-items: center;
   align-items: center;
   border-radius: 5px 5px;
+  font-weight: bold;
+  height: 24px;
+ 
 }
 
 div[id^="id-"] {
@@ -488,6 +489,7 @@ p#Namn {
   padding-top: 3px;
   padding-bottom: 3px;
   border-radius: 5px 5px;
+  font-weight: bold;
 }
 
 #back1 {
