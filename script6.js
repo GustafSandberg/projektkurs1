@@ -122,8 +122,13 @@ var jsonLng;
 var latitude;
 var longitude;
 const directionsService = new google.maps.DirectionsService();
-const directionsRenderer = new google.maps.DirectionsRenderer();	
-
+const directionsRenderer = new google.maps.DirectionsRenderer();
+var Billigast;
+var Högstabetyg;
+var visaalla;
+var Niohål;
+var Artonhål;
+var KnapparClass
 function init() {
 	mapLocationElem = document.getElementById("mapLocation");
 	document.getElementById("billigast").addEventListener("click", billigast);
@@ -142,6 +147,13 @@ function init() {
 	hotel = document.getElementById("hotel").src;
 	tabell = document.getElementById("sloptabell").src;
 	golfpar = document.getElementById("golfpar").src;
+	Högstabetyg = document.getElementById("högstbetyg");
+	Visaalla = document.getElementById("visaalla");
+	Niohål = document.getElementById("niohål");
+	Artonhål = document.getElementById("artonhål");
+	Billigast = document.getElementById("billigast");
+	Visaalla.style.backgroundColor="White"; 
+
 
 	getCurrentPosition(function (position) {
 		latitude = position.coords.latitude;
@@ -192,7 +204,7 @@ function initMap() {
 		})
 		marker.addListener("click", function () {
 			hideMarkers();
-			
+
 
 			directionsRenderer.setMap(myMap);
 
@@ -223,9 +235,14 @@ function hideMarkers() {
 
 
 function billigast() {
+	Visaalla.style.backgroundColor="rgba(255, 255, 255, 0.707)";
+	Niohål.style.backgroundColor="rgba(255, 255, 255, 0.707)";
+	Artonhål.style.backgroundColor="rgba(255, 255, 255, 0.707)"; 
+	Högstabetyg.style.backgroundColor = "rgba(255, 255, 255, 0.707)";
+	Billigast.style.backgroundColor="white"
 	hideMarkers();
 	directionsRenderer.setMap(null);
-	
+
 	myMap = new google.maps.Map(document.getElementById("map"), {
 		zoom: 6.5,
 		center: { lat: 57.4254, lng: 15.0865 },
@@ -264,6 +281,13 @@ function billigast() {
 }
 
 function highcourses() {
+
+	Visaalla.style.backgroundColor="rgba(255, 255, 255, 0.707)";
+	Niohål.style.backgroundColor="rgba(255, 255, 255, 0.707)";
+	Artonhål.style.backgroundColor="rgba(255, 255, 255, 0.707)"; 
+	Billigast.style.backgroundColor = "rgba(255, 255, 255, 0.707)";
+	Högstabetyg.style.backgroundColor="white";
+
 	hideMarkers();
 	directionsRenderer.setMap(null);
 	myMap = new google.maps.Map(document.getElementById("map"), {
@@ -304,6 +328,11 @@ function highcourses() {
 }
 
 function visaAlla() {
+	Högstabetyg.style.backgroundColor="rgba(255, 255, 255, 0.707)";
+	Niohål.style.backgroundColor="rgba(255, 255, 255, 0.707)";
+	Artonhål.style.backgroundColor="rgba(255, 255, 255, 0.707)"; 
+	Billigast.style.backgroundColor = "rgba(255, 255, 255, 0.707)";
+	Visaalla.style.backgroundColor="white"
 	hideMarkers();
 	directionsRenderer.setMap(null);
 	myMap = new google.maps.Map(document.getElementById("map"), {
@@ -344,7 +373,12 @@ function visaAlla() {
 
 }
 
-function nioHål() {	
+function nioHål() {
+	Visaalla.style.backgroundColor="rgba(255, 255, 255, 0.707)"
+	Högstabetyg.style.backgroundColor="rgba(255, 255, 255, 0.707)"
+	Artonhål.style.backgroundColor="rgba(255, 255, 255, 0.707)"; 
+	Billigast.style.backgroundColor = "rgba(255, 255, 255, 0.707)";
+	Niohål.style.backgroundColor="white"
 	hideMarkers();
 	directionsRenderer.setMap(null);
 	myMap = new google.maps.Map(document.getElementById("map"), {
@@ -386,6 +420,11 @@ function nioHål() {
 }
 
 function artonHål() {
+	Visaalla.style.backgroundColor="rgba(255, 255, 255, 0.707)"
+	Niohål.style.backgroundColor="rgba(255, 255, 255, 0.707)"
+	Högstabetyg.style.backgroundColor="rgba(255, 255, 255, 0.707)"; 
+	Billigast.style.backgroundColor = "rgba(255, 255, 255, 0.707)";
+	Artonhål.style.backgroundColor="white"
 	hideMarkers();
 	directionsRenderer.setMap(null);
 	myMap = new google.maps.Map(document.getElementById("map"), {
