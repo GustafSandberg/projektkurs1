@@ -200,7 +200,7 @@ function showMoreInfoJson(responseText, selectedID) {
 
             let Webb = Golfbanor[i].Webb !== undefined ? "<p id=Webb><b></b>" + Golfbanor[i].Webb + "</p>" : "";
 
-            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index3.html><img id=back1 src=img/cross.png alt=backbutton></p>" : "";
+            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index4.html><img id=back1 src=img/cross.png alt=backbutton></p>" : "";
 
             let Par = Golfbanor[i].Par !== undefined ? "<p id=Par><b></b><img class=Ikoner src='" + golfpar + "'alt=golfpar'>" + Golfbanor[i].Par + "</p>" : "";
 
