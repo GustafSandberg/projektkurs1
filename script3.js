@@ -31,7 +31,6 @@ function init() {
     shopbild = document.getElementById("shopbild").src;
     golfclub = document.getElementById("golfclub").src;
     golffield = document.getElementById("golffield").src;
-    trailer = document.getElementById("trailer").src;
     food = document.getElementById("food").src;
     Golfboll = document.getElementById("boll").src;
     hotel = document.getElementById("hotel").src;
@@ -92,43 +91,37 @@ function getCurrentPosition(successCallback, errorCallback) {
 
 function smapi2() {
     let request = new XMLHttpRequest();
-    request.open("GET", "https://smapi.lnu.se/api/?api_key=" + myApiKey + "&controller=establishment&provinces=småland&method=getfromlatlng&descriptions=golfbana&lat=" + latitude + "&lng=" + longitude + "&radius=5000&sort_in=" + sort_in + "&order_by=" + order_by);
-
+    request.responseType = "json";
+    request.open("GET", "https://smapi.lnu.se/api/?api_key=" + myApiKey + "&controller=establishment&provinces=småland&method=getFromLatLng&descriptions=golfbana&lat=" + latitude + "&lng=" + longitude + "&radius=5000&sort_in=" + sort_in + "&order_by=" + order_by);
     request.send(null);
     request.onreadystatechange = function () {
-        if (request.readyState == 4)
+        if (request.readyState == 4) {
             if (request.status == 200) {
-                displayResponseText(request.responseText);
+                displayResponseText(request.response);
+            } else {
+                textdiv.innerHTML = "Servern hittades inte";
             }
-            else smapilistor.innerHTML = "Servern hittades inte";
+        }
     };
-
 }
 
-function displayResponseText(responseText, selectedID) {
-    var jsonResponse = JSON.parse(responseText);
-    var smapitext2 = "";
+function displayResponseText(response, selectedID) {
+    var jsonResponse = response;
+    let smapitext2 = "";
 
     if (smapilistor != null) {
-
         for (var i = 0; i < jsonResponse.payload.length; i++) {
             var item = jsonResponse.payload[i];
 
             smapitext2 += "<div onclick='addElement(" + item.id + ")' id='id-" + item.id + "'> " +
-
                 "<div id=NamnAPI>" + item.name + "</div>" + "<div id=ratingprice>" +
-
                 "<p id=BetygAPI>" + parseFloat(item.rating).toFixed(1) + "/5 <img src='img/stars/star.png' alt='star' id='star'></p>" +
-
                 "<p id=PrisAPI>" + item.price_range + " kr <img src ='img/money.png' alt='money' id='money'></p>" +
-
                 "<p id=AvståndAPI>" + parseFloat(item.distance_in_km).toFixed(1) + " km <img src ='img/route.png' alt='route' id='route'></p>" + "</div></div>";
-
-            smapilistor2.innerHTML = smapitext2;
-
         }
+        smapilistor2.innerHTML = smapitext2;
     }
-    requestPic(responseText);
+    requestPic(jsonResponse);
 }
 
 function addElement(id) {
@@ -151,6 +144,7 @@ function showMoreInfoJson(responseText, selectedID) {
     var jsonResponse = JSON.parse(responseText);
     let smapitext = "";
     document.getElementById("KartaBtn").classList.remove("hidden");
+
 
     for (var i = 0; i < jsonResponse.Golfbanor.length; i++) {
         var Golfbanor = jsonResponse.Golfbanor;
@@ -190,7 +184,7 @@ function showMoreInfoJson(responseText, selectedID) {
 
             let Webb = Golfbanor[i].Webb !== undefined ? "<p id=Webb><b></b>" + Golfbanor[i].Webb + "</p>" : "";
 
-            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index3.html><img id=back1 src=img/cross.png alt=backbutton></p>" : "";
+            let Tillbaka = Golfbanor[i].Tillbaka !== undefined ? "<p id=Tillbaka><b></b><a href=index2.html><img id=back1 src=img/cross.png alt=backbutton></p>" : "";
 
             let Par = Golfbanor[i].Par !== undefined ? "<p id=Par><b></b><img class=Ikoner src='" + golfpar + "'alt=golfpar'>" + Golfbanor[i].Par + "</p>" : "";
 
@@ -229,11 +223,25 @@ function showMoreInfoJson(responseText, selectedID) {
     }
 }
 
-function ShowMap() { 
-    
+function smapifilter() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "https://smapi.lnu.se/api/?api_key=" + myApiKey + "&controller=establishment&method=getstats&debug=true&descriptions=golfbana")
+    request.send(null);
+    request.onreadystatechange = function () {
+        if (request.readyState == 4)
+            if (request.status == 200) displayResponseText(request.responseText);
+            else textdiv.innerHTML = "Servern hittades inte";
+    };
+
+}
+
+
+
+function ShowMap() {
+
     if (Show) {
         Show = false;
-       
+        document.getElementById("KartaMaps").classList.remove("hidden");
         KartaMaps = new google.maps.Map(document.getElementById("KartaMaps"), {
             zoom: 6.5,
             center: { lat: 57.4254, lng: 15.0865 },
@@ -244,59 +252,56 @@ function ShowMap() {
             map: KartaMaps,
         });
         const marker2 = new google.maps.Marker({
-            position: { lat: latitude, lng: longitude },
+            position: { lat: latitude, lng: longitude},
             map: KartaMaps,
-
         });
         const directionsService = new google.maps.DirectionsService();
         const directionsRenderer = new google.maps.DirectionsRenderer();
-
+        
         directionsRenderer.setMap(KartaMaps);
-
+        
         const request = {
-            origin: { lat: latitude, lng: longitude },
-            destination: { lat: Number(jsonLat), lng: Number(jsonLng) },
+            origin: { lat: latitude, lng: longitude  },
+            destination: { lat: Number(jsonLat), lng: Number(jsonLng)},
             travelMode: google.maps.TravelMode.DRIVING
         };
-
-        directionsService.route(request, function (result, status) {
+        
+        directionsService.route(request, function(result, status) {
             if (status == google.maps.DirectionsStatus.OK) {
                 directionsRenderer.setDirections(result);
             }
         });
-        document.getElementById("KartaMaps").classList.remove("hidden");
     }
     else {
         Show = true;
-       document.getElementById("KartaMaps").classList.add("hidden");
-
+        document.getElementById("KartaMaps").classList.add("hidden");
     }
 
 }
 
-function requestPic(responseText, id) {
+function requestPic(smapiResponse) {
     let request = new XMLHttpRequest();
-
-    request.open("GET", "golfklubbar.json?id=" + id + true);
+    request.open("GET", "golfklubbar.json", true);
     request.send(null);
 
     request.onreadystatechange = function () {
-        if (request.readyState == 4)
+        if (request.readyState == 4) {
             if (request.status == 200) {
-                ShowPic(request.responseText, responseText);
+                ShowPic(request.responseText, smapiResponse);
+            } else {
+                smapilistor.innerHTML = "Servern hittades inte";
             }
-            else smapilistor.innerHTML = "Servern hittades inte";
+        }
     };
-
 }
 
-function ShowPic(responseText, smapiRes) {
-    var jsonResponse = JSON.parse(responseText);
-    var smapiResponse = JSON.parse(smapiRes).payload;
+function ShowPic(jsonResponse, smapiResponse) {
+    var jsonResponseParsed = JSON.parse(jsonResponse);
+    var smapiResponseParsed = smapiResponse.payload;
 
-    for (var i = 0; i < smapiResponse.length; i++) {
-        let bildID = smapiResponse[i].id;
-        var golfbanor = jsonResponse.Golfbanor;
+    for (var i = 0; i < smapiResponseParsed.length; i++) {
+        let bildID = smapiResponseParsed[i].id;
+        var golfbanor = jsonResponseParsed.Golfbanor;
 
         for (var j = 0; j < golfbanor.length; j++) {
             if (bildID == golfbanor[j].id) {
@@ -306,9 +311,5 @@ function ShowPic(responseText, smapiRes) {
         }
     }
 }
-
-
-
-
 
 

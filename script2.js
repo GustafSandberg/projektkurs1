@@ -1,3 +1,4 @@
+
 var myApiKey = "FUsnXFJS";
 var smapilistor;
 var latitude;
@@ -31,7 +32,6 @@ function init() {
     shopbild = document.getElementById("shopbild").src;
     golfclub = document.getElementById("golfclub").src;
     golffield = document.getElementById("golffield").src;
-    trailer = document.getElementById("trailer").src;
     food = document.getElementById("food").src;
     Golfboll = document.getElementById("boll").src;
     hotel = document.getElementById("hotel").src;
@@ -86,43 +86,37 @@ function getCurrentPosition(successCallback, errorCallback) {
 
 function smapi2() {
     let request = new XMLHttpRequest();
-    request.open("GET", "https://smapi.lnu.se/api/?api_key=" + myApiKey + "&controller=establishment&method=getfromlatlng&debug=true&descriptions=golfbana&lat=" + latitude + "&lng=" + longitude + "&radius=" + radie + "&sort_in=DESC&order_by=distance_in_km");
+    request.responseType = "json";
+    request.open("GET", "https://smapi.lnu.se/api/?api_key=" + myApiKey + "&controller=establishment&method=getfromlatlng&descriptions=golfbana&lat=" + latitude + "&lng=" + longitude + "&radius=" + radie + "&sort_in=DESC&order_by=distance_in_km", true);
     request.send(null);
     request.onreadystatechange = function () {
-        if (request.readyState == 4)
-            if (request.status == 200) displayResponseText(request.responseText);
-            else textdiv.innerHTML = "Servern hittades inte";
+        if (request.readyState == 4) {
+            if (request.status == 200) {
+                displayResponseText(request.response);
+            } else {
+                textdiv.innerHTML = "Servern hittades inte";
+            }
+        }
     };
 }
 
-function displayResponseText(responseText, selectedID) {
-    var jsonResponse = JSON.parse(responseText);
+function displayResponseText(response, selectedID) {
+    var jsonResponse = response;
     let smapitext2 = "";
 
     if (smapilistor != null) {
-
-
         for (var i = 0; i < jsonResponse.payload.length; i++) {
             var item = jsonResponse.payload[i];
 
             smapitext2 += "<div onclick='addElement(" + item.id + ")' id='id-" + item.id + "'> " +
-
-            "<div id=NamnAPI>" + item.name + "</div>" + "<div id=ratingprice>" +
-
-            "<p id=BetygAPI>" + parseFloat(item.rating).toFixed(1) + "/5 <img src='img/stars/star.png' alt='star' id='star'></p>" +
-
-            "<p id=PrisAPI>" + item.price_range + " kr <img src ='img/money.png' alt='money' id='money'></p>" +
-
-            "<p id=AvståndAPI>" + parseFloat(item.distance_in_km).toFixed(1) + " km <img src ='img/route.png' alt='route' id='route'></p>" + "</div></div>";
-
+                "<div id=NamnAPI>" + item.name + "</div>" + "<div id=ratingprice>" +
+                "<p id=BetygAPI>" + parseFloat(item.rating).toFixed(1) + "/5 <img src='img/stars/star.png' alt='star' id='star'></p>" +
+                "<p id=PrisAPI>" + item.price_range + " kr <img src ='img/money.png' alt='money' id='money'></p>" +
+                "<p id=AvståndAPI>" + parseFloat(item.distance_in_km).toFixed(1) + " km <img src ='img/route.png' alt='route' id='route'></p>" + "</div></div>";
+        }
         smapilistor2.innerHTML = smapitext2;
-
     }
-        
-
-    }
-    requestPic(responseText);
-
+    requestPic(jsonResponse);
 }
 
 function addElement(id) {
@@ -279,29 +273,30 @@ function ShowMap() {
     }
 
 }
-function requestPic(responseText, id) {
-    let request = new XMLHttpRequest();
 
-    request.open("GET", "golfklubbar.json?id=" + id + true);
+function requestPic(smapiResponse) {
+    let request = new XMLHttpRequest();
+    request.open("GET", "golfklubbar.json", true);
     request.send(null);
 
     request.onreadystatechange = function () {
-        if (request.readyState == 4)
+        if (request.readyState == 4) {
             if (request.status == 200) {
-                ShowPic(request.responseText, responseText);
+                ShowPic(request.responseText, smapiResponse);
+            } else {
+                smapilistor.innerHTML = "Servern hittades inte";
             }
-            else smapilistor.innerHTML = "Servern hittades inte";
+        }
     };
-
 }
 
-function ShowPic(responseText, smapiRes) {
-    var jsonResponse = JSON.parse(responseText);
-    var smapiResponse = JSON.parse(smapiRes).payload;
+function ShowPic(jsonResponse, smapiResponse) {
+    var jsonResponseParsed = JSON.parse(jsonResponse);
+    var smapiResponseParsed = smapiResponse.payload;
 
-    for (var i = 0; i < smapiResponse.length; i++) {
-        let bildID = smapiResponse[i].id;
-        var golfbanor = jsonResponse.Golfbanor;
+    for (var i = 0; i < smapiResponseParsed.length; i++) {
+        let bildID = smapiResponseParsed[i].id;
+        var golfbanor = jsonResponseParsed.Golfbanor;
 
         for (var j = 0; j < golfbanor.length; j++) {
             if (bildID == golfbanor[j].id) {

@@ -141,7 +141,6 @@ function init() {
 	shopbild = document.getElementById("shopbild").src;
 	golfclub = document.getElementById("golfclub").src;
 	golffield = document.getElementById("golffield").src;
-	trailer = document.getElementById("trailer").src;
 	food = document.getElementById("food").src;
 	Golfboll = document.getElementById("boll").src;
 	hotel = document.getElementById("hotel").src;
